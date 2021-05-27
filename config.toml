@@ -5,3 +5,9 @@ theme = "hugo-tania"
 
 [params]
 titleEmoji = "😃"
+
+[menu]
+header = [
+    { name = "Articles", url = "/articles/" },
+]
+
