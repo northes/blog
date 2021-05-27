@@ -169,7 +169,8 @@ blockquote :not(pre)>code[class*='language-'] {
 
 @media screen and (min-width: 800px) {
     blockquote {
-        padding: 2rem 0 2rem 2rem;
+        //padding: 2rem 0 2rem 2rem;
+        padding: 1rem;
     }
 }
 
