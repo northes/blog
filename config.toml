@@ -1,3 +1,7 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://northes.co/"
+languageCode = "zh-cn"
+title = "Northes"
+theme = "hugo-tania"
+
+[params]
+titleEmoji = "😃"
