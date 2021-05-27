@@ -8,7 +8,11 @@ titleEmoji = "😃"
 
 [menu]
 header = [
-    { name = "Articles", url = "/articles/",weight=1 },
-    { name = "About", url = "/about/",weight=2 },
+    { name = "Articles", url = "/articles/", weight = 1 },
+    { name = "About", url = "/about/", weight = 2 },
 ]
 
+
+[markup.highlight]
+noClasses = false
+lineNos = true
