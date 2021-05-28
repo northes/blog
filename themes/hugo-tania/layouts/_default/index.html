@@ -38,11 +38,15 @@
         </h2>
         <div class="posts">
             {{ range $pages.Pages }}
-            <div class="post">
+            <div class="post" style="margin-bottom: 0.5rem">
                 <a href="{{ .RelPermalink }}">
                     <div class="post-row">
                         <time>{{ .Date.Format "Jan 02" }}</time>
-                        <h3>{{ .Title }}</h3>
+                        <div>
+                            <h3>{{ .Title }}</h3>
+                            <span style="font-size: small;color: #868e96">{{ .Description | truncate 40 }}</span>
+                        </div>
+<!--                        <h3>{{ .Title }}</h3>-->
                     </div>
                     <!--<div class="new-post">New!</div>-->
                 </a>
