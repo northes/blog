@@ -161,7 +161,7 @@ blockquote {
     background: var(--blockquote);
     font-weight: 400;
     border-left: 5px solid var(--blockquote-left);
-    p{
+    p,ol{
         margin-bottom: 0;
     }
 
