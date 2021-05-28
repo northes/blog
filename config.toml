@@ -2,6 +2,7 @@ baseURL = "https://northes.co/"
 languageCode = "zh-cn"
 title = "Northes"
 theme = "hugo-tania"
+enableRobotsTXT = true
 
 [params]
 titleEmoji = "😃"
