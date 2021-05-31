@@ -12,7 +12,7 @@
 /*定义滑块 内阴影+圆角*/
 ::-webkit-scrollbar-thumb{
     border-radius: 10px;
-    background-color: #ced4da;
+    background-color: var(--scrollbar-gb);
 }
 
 // 稳定页面防止因滚动条出现闪动
