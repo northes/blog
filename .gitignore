@@ -1,5 +1,13 @@
+# IDE specific
 .idea/
+.vscode/
+
+# Mac
 .DS_Store
-_book/
+
+# Node
 node_modules/
+
+# Hugo
 public/
+resources/
