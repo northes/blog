@@ -9,12 +9,17 @@ titleEmoji = "😃"
 
 [menu]
 header = [
-    { name = "Articles", url = "/articles/", weight = 1 },
-    { name = "Tags", url = "/tags/", weight = 2 },
-    { name = "About", url = "/about/", weight = 3 },
+#    { name = "Articles", url = "/articles/", weight = 1 },
+#    { name = "Tags", url = "/tags/", weight = 2 },
+    { name = "Projects", url = "/projects/", weight = 3 },
+    { name = "About", url = "/about/", weight = 4 },
+
 ]
 
 
 [markup.highlight]
 noClasses = false
 lineNos = true
+
+[markup.goldmark.renderer]
+unsafe = true
