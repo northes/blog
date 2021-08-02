@@ -24,14 +24,4 @@
     {{- end }}
     {{ $features := resources.Get "js/features.js" | minify | fingerprint }}
     <script async src="{{ $features.RelPermalink }}"></script>
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?bf4ee24df4eb8c453a6edf89fa3cdda9";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-
 </footer>
