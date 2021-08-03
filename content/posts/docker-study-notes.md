@@ -65,10 +65,12 @@ $ docker logout
 #### 构建
 
 ```shell
-$ docker build . -t name:tag
+$ docker build -t name:tag .
 ```
 
 > -t  设置docker镜像的名字和标签
+> 
+> -f  设置Dockerfile文件的路径，如果Dockerfile文件为默认的文件名，则可省略
 
 
 
