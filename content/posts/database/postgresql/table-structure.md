@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL 查看表结构"
 date: 2021-09-16T16:57:13+08:00
-draft: true
+draft: false
 author : "Northes"
 description: "查看表结构 导出"
 tags: ["学习笔记","PostgreSQL"]
