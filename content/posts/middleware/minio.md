@@ -1,7 +1,7 @@
 ---
 title: "Minio 学习笔记"
 date: 2021-08-25T15:26:59+08:00
-draft: false
+draft: true
 ---
 
 
