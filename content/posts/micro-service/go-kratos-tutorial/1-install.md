@@ -4,7 +4,7 @@ date: 2021-12-04T20:49:13+08:00
 draft: false
 author : "Northes"
 description: "安装必要的运行环境，包括 protoc，kratos，make"
-tags: ["学习笔记","微服务","Kratos"]
+tags: ["学习笔记","微服务","Kratos","手摸手","Bilibili"]
 ---
 
 ## 安装
@@ -42,3 +42,10 @@ choco install make
 
 
 > 至此，Kratos相关环境就安装好了，即可愉快玩耍
+
+
+## 报错
+### 解决 Goland .proto 文件报错
+1. 设置->语言和框架->Protocol Buffers
+2. 取消 `Configure automatically` 勾选
+3. 将项目目录下的 `third_party` 加到 `Import Paths` 下

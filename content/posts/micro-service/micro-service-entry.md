@@ -19,6 +19,22 @@ syntax = "proto3";
 // 包名
 package protobufTest;
 
+
+// 定义的服务
+service Product {
+  rpc AddProduct(ProductInfo) returns (ResponseProduct);
+}
+
+// 枚举
+enum XX {
+  NORMAL = 0;
+}
+
+
+// 1 是字段标识符，不是赋值
+// 尽量控制在 1~15 ，超过 15 会开两个结构体存储
+// 字段名一般采用小写下划线的方式
+// 每个 message 的字段标识都是从1开始
 // 消息格式
 message ProductInfo{
   int64 id = 1;
@@ -28,14 +44,12 @@ message ProductInfo{
 message ResponseProduct{
   int64 product_id = 1;
 }
-// 1 是字段标识符，不是赋值
-// 尽量控制在 1~15 ，超过 15 会开两个结构体存储
-// 字段名一般采用下划线的方式连接
-// 每个 message 的字段标识都是从1开始
 
+message GetIpRequest {
+  string ip = 1;
+}
 
-// 定义的服务
-service Product {
-  rpc AddProduct(ProductInfo) returns (ResponseProduct);
+message GetIpReply {
+  repeated string info = 1; // 重复的string,相当于数组
 }
 ```
