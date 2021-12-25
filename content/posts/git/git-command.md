@@ -110,6 +110,9 @@ git revert HEAD
 ## 提交记录
 ```shell
 git log
+
+# 追溯一个指定文件的历史修改记录。它能显示任何文件中每行最后一次修改的提交记录
+git blame
 ```
 
 

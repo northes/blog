@@ -108,7 +108,7 @@ author : "Northes"
 通过命令新建文件时会包含于文件内
 
 ```shell
-$ hugo new /posts/1.md
+$ hugo new /posts/kubectl.md
 ```
 
 ### 可选参数

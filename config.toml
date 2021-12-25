@@ -3,7 +3,7 @@ languageCode = "zh-cn"
 title = "Northes"
 theme = "hugo-tania"
 enableRobotsTXT = true
-paginate = 6
+paginate = 10
 
 [params]
 titleEmoji = "😃"
