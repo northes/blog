@@ -9,7 +9,11 @@ tags: ["学习笔记","Golang","微服务"]
 
 ## RPC
 
+(Remote Procedure Call) 远程过程调用
+
 ## gRPC
+
+是谷歌开源的一个rpc框架，go语言项目中常用
 
 ## Protocol Buffers
 ```proto
@@ -19,6 +23,8 @@ syntax = "proto3";
 // 包名
 package protobufTest;
 
+// go包名，生成后的pb包名为v1
+option go_package = "apihut-server-test/api/helloworld/v1;v1";
 
 // 定义的服务
 service Product {
@@ -28,6 +34,7 @@ service Product {
 // 枚举
 enum XX {
   NORMAL = 0;
+  SUCCESS = 1;
 }
 
 
@@ -50,6 +57,27 @@ message GetIpRequest {
 }
 
 message GetIpReply {
-  repeated string info = 1; // 重复的string,相当于数组
+  // 重复的string,相当于数组
+  repeated string info = 1; 
 }
+
+
+// 内嵌结构体
+message Response{
+  message Info{
+    int64 id =1;
+    string name =2;
+    string version =3;
+  }
+  Info info = 1;
+}
+```
+
+##### proto3字段不设置时会默认赋类型零值
+
+如需判断字段是未赋值还是传0值，可引入 `import "google/protobuf/wrappers.proto";` 包，并将 `string` 类型替换为 `google.protobuf.StringValue`
+
+完整写法
+```protobuf
+google.protobuf.StringValue str = 1;
 ```
