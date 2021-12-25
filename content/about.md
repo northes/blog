@@ -12,4 +12,4 @@ author : "Northes"
 
 
 
-部署于 [Vercel](https://vercel.com) 且开源于 [Github](https://github.com/Northes/Blog)
+部署于 [Vercel](https://vercel.com) 且开源于 [Github](https://github.com/northes/Blog)
