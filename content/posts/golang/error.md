@@ -391,6 +391,8 @@ func WriteResponse2(w io.Writer, st Status, headers []Header, body io.Reader) er
 
 ## Wrap errors
 
+> wrap 美 [ræp] 读作 `rap`
+
 有下面两个场景
 
 在调用一些方法的时候，如果遇到错误，我们一般会对错误进行处理，或者往上面抛。如果别人调用我们的方法，遇到错误也同样地往上抛，那么层层调用，最终到达顶层的时候，没有上下文，将十分难以debug，不知道错误是在哪里被抛出的。
@@ -514,15 +516,58 @@ could not read config
 > 以下所说的 errors 都是 pkg/errors 包
 
 - 在应用代码中，使用 `errors.New` 或 `errors.Errorf` 返回错误
+
 - 如果调用自己包内的函数，通常简单的直接返回
-- 如果和其他库进行协作，考虑使用 `errors.Wrap` 或者 `errors.Wrapf` 保存堆栈信息。（公司基础库，github第三方库，go标准库）
+
+- 如果和其他库进行协作，考虑使用 `errors.Wrap` 或者 `errors.Wrapf` 保存堆栈信息。（公司基础库，github第三方库，go标准库），如果只想记录堆栈信息，可以使用 `errors.WithStack` ，只想添加上下文信息可以使用 `errors.WithMessage`
+
 - 直接返回错误，而不是每个错误产生的地方到处打日志
-- 在程序的顶部或者是工作的 `goroutine` 顶部（请求入口、顶层横切面统一打日志），使用 `%+v` 把堆栈详情记录
+
+- 在程序的顶部或者是工作的 `goroutine` 顶部（请求入口、顶层横切面统一打日志），使用 `%+v` 把堆栈详情记录，同时还可以记录 context（trace_id） ，request（form、body等） 
+
 - 使用 `errors.Cause` 获取 root error，在进行和 sentinel error 的绑定
+
 - 基础库，kit 库不应该 wrap error，只有应用程序代码可以。如果基础库进行了 wrap error，那么其他人的业务代码再次进行wrap error 的话，就会发生两个堆栈信息记录，这是重复且无用的。具有最高可重用性的包，如基础库只能返回根错误值。
+
 - 如果不打算处理error，应该wrap error并返回
+
 - 一旦确定函数/方法将处理错误，错误就不再是错误。如果函数/方法仍然 需要发出返回，则它不能返回错误值。它应该只返回零（如果降级处理，你返回了降级数据，那么你需要return nil）
 
+- 在首次错误出现的地方 wrap，如
+
+   ```go
+   func main() {
+   	err := biz()
+   	if err != nil {
+   		fmt.Printf("%+v", err)
+   	}
+   }
+   
+   func dao() error {
+   	return nil
+   }
+   
+   type User struct {
+   	Age int
+   }
+   
+   var ErrAgeTooYoung = errors.New("too　young")
+   
+   func biz() error {
+   	u := &User{Age: 10}
+   	err := dao()
+   	if err != nil {
+   		return err
+   	}
+   	if u.Age <= 20 {
+   		return errors.Wrap(ErrAgeTooYoung, "hehehe")
+   	}
+   	return nil
+   }
+   ```
+   > dao 层如果报错直接透传。如果在biz层有新的错误产生，那么在biz层进行wrap
+
+   
 
 
 ## go 1.13 后的 error 的一些改进
