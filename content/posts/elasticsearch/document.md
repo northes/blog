@@ -1,5 +1,5 @@
 ---
-title: "Elasticsearch - 文档与索引"
+title: "Elasticsearch - 文档"
 date: 2021-12-25T00:05:43+08:00
 draft: false
 author : "Northes"
@@ -46,17 +46,6 @@ tags: ["学习笔记","Elasticsearch"]
 | _version | 文档版本信息                    |
 | _score   | 相关性打分                      |
 
-
-
-## 索引
-
-每一个相似文档的集合
-
-`Mapping` 定义文档字段类型，用于定义包含的文档的字段名和字段类型，指定字段是否进行倒排索引
-
-`Shard` 分片。物理空间的概念，索引中的数据分散在 Shard 上
-
-`Setting` 定义不同的数据分布。多少个分片，数据如何分布等
 
 
 
