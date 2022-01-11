@@ -24,3 +24,11 @@ lineNos = true
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[markup]
+[highlight]
+noClasses = false
+lineNos = true
+[goldmark]
+[renderer]
+unsafe = true
