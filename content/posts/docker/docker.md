@@ -26,8 +26,6 @@ tags: ["Docker","MySQL","Redis","学习笔记"]
 -v /suzhu:/rongqi
 ```
 
-
-
 ```shell
 # 链接其他容器 容器名或id:内部别名
 --link mysql:mysql
@@ -42,8 +40,6 @@ tags: ["Docker","MySQL","Redis","学习笔记"]
 --restart always
 ```
 
-
-
 ## docker 命令
 
 #### 登录
@@ -52,15 +48,11 @@ tags: ["Docker","MySQL","Redis","学习笔记"]
 $ docker login
 ```
 
-
-
 #### 退出登录
 
 ```shell
 $ docker logout
 ```
-
-
 
 #### 构建
 
@@ -68,19 +60,15 @@ $ docker logout
 $ docker build -t name:tag .
 ```
 
-> -t  设置docker镜像的名字和标签
-> 
-> -f  设置Dockerfile文件的路径，如果Dockerfile文件为默认的文件名，则可省略
-
-
+> -t 设置docker镜像的名字和标签
+>
+> -f 设置Dockerfile文件的路径，如果Dockerfile文件为默认的文件名，则可省略
 
 #### 查看所有镜像
 
 ```shell
 $ docker images
 ```
-
-
 
 #### 删除镜像
 
@@ -89,8 +77,6 @@ $ docker rmi <name or id>
 ```
 
 如果删除报错，则输入 ` docker ps -a ` 查看容器是否已停止，未停止则停止，然后输入 ` docker rm <name or id> ` 删除已停止的容器，最后再 ` rmi ` 删除镜像
-
-
 
 #### 推送镜像
 
@@ -102,10 +88,6 @@ $ docker tag image_name:tag username/image_name:tag
 # 推送
 $ docker push username/image_name:tag
 ```
-
-
-
-
 
 #### 查看运行的容器（运行、重启、停止、删除）
 
@@ -127,8 +109,6 @@ $ docker restart <name or id>
 $ docker rm <name or id>
 ```
 
-
-
 #### 进入容器内部
 
 ```shell
@@ -139,12 +119,6 @@ $ docker exec -it redis /bin/sh
 # 退出
 exit 
 ```
-
-
-
-
-
-
 
 ## dockerfile
 
@@ -181,8 +155,6 @@ EXPOSE 8888
 CMD ["/dist/app"]
 ```
 
-
-
 #### 分阶段构建
 
 ```dockerfile
@@ -214,8 +186,6 @@ COPY --from=builder /build/app /
 # 需要运行的命令
 ENTRYPOINT ["/app"]
 ```
-
-
 
 #### 附带有静态文件、配置文件
 
@@ -258,40 +228,28 @@ COPY --from=builder /build/bubble /
 ENTRYPOINT ["/bubble", "conf/config.ini"]
 ```
 
-
-
-
-
-
-
 ## docker-compose
 
 安装
-
-
-
-
 
 示例配置文件
 
 ```yml
 version: 3
 services:
-    web:
-        image: nginx
-        ports:
-        - 80:80
-        environments:
-        - MYENV=zzzz
-        volumes:
-        - /h:/nginx
-    php:
-        image: php
-        volumes:
-        - /b:/c
+  web:
+    image: nginx
+    ports:
+      - 80:80
+    environments:
+      - MYENV=zzzz
+    volumes:
+      - /h:/nginx
+  php:
+    image: php
+    volumes:
+      - /b:/c
 ```
-
-
 
 运行
 
@@ -302,183 +260,4 @@ docker-compose up -d
 > -d 后台运行
 
 
-
-
-
-## Kubernetes
-
-
-
-
-
-
-
-## Redis
-
-### 运行
-
-```shell
-$ docker run -itd --name redis-test -p 6379:6379 redis
-```
-
-
-
-### 操作
-
-进入redis控制台后
-
-```shell
-$ redis-cli
-```
-
-退出
-
-```shell
-$ exit
-```
-
-
-
-
-
-
-
-## MySQL
-
-### 运行
-
-```shell
-$  docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql
-```
-
-
-
-### 操作
-
-进入mysql控制台后
-
-```shell
-$ mysql -u root -p
-```
-
-退出
-
-```mysql
-exit
-```
-
-
-
-> sql 语句注意以 ; 结尾
-
-#### 数据库
-
-##### 创建数据库
-
-```mysql
-create database 数据库名;
-```
-
-
-
-##### 查看数据库
-
-```mysql
-show databases;
-```
-
-
-
-##### 选择数据库
-
-```mysql
-use 数据库名
-```
-
-
-
-##### 删除数据库
-
-```mysql
-drop database <数据库名>;
-```
-
-
-
-
-
-#### 数据表
-
-##### 创建数据表
-
-```mysql
-create table table_name (column_name column_type);
-```
-
-```mysql
-CREATE TABLE IF NOT EXISTS `runoob_tbl`(
-   `runoob_id` INT UNSIGNED AUTO_INCREMENT,
-   `runoob_title` VARCHAR(100) NOT NULL,
-   `runoob_author` VARCHAR(40) NOT NULL,
-   `submission_date` DATE,
-   PRIMARY KEY ( `runoob_id` )
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
-```
-
-
-
-##### 查看数据表
-
-```mysql
-show tables;
-```
-
-
-
-##### 删除数据表
-
-```mysql
-drop table table_name ;
-```
-
-
-
-
-
-#### 数据
-
-##### 插入数据
-
-```mysql
-INSERT INTO table_name ( field1, field2,...fieldN ) VALUES ( value1, value2,...valueN );
-```
-
-
-
-##### 查找数据
-
-```mysql
-select * from 数据表;
-```
-
-```mysql
-select * from 数据表 where id < 5;
-```
-
-
-
-##### 更新数据
-
-```mysql
-UPDATE table_name SET field1=new-value1, field2=new-value2
-[WHERE Clause]
-```
-
-
-
-##### 删除数据
-
-```mysql
-DELETE FROM table_name [WHERE Clause]
-```
 

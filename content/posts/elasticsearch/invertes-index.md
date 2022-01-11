@@ -1,7 +1,7 @@
 ---
 title: "Elasticsearch - 倒排索引"
 date: 2021-12-29T15:52:05+08:00
-draft: true
+draft: false
 author : "Northes"
 description: "使用倒排索引进行高性能的全文索引"
 tags: ["学习笔记","Elasticsearch"]
