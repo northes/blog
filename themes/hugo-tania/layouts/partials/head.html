@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="dark">
     <title>{{ with .Title }} {{ . }} | {{ end }}{{ .Site.Title }}</title>
+    <meta name="keywords" content="{{ .Site.Params.siteKeyword }}">
+    <meta name="description" content="{{ .Site.Params.siteDesc }}">
+    <meta name="author" content="{{ .Site.Params.siteAuthor }}">
     <!-- uncomment this to add favicon -->
     <!-- <link rel="icon" type="image/png" href="{{ "/icons/favicon.png" | relURL }}" /> -->
     {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
@@ -24,7 +27,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-VET8LQFS48');
     </script>
 </head>

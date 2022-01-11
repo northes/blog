@@ -54,7 +54,7 @@ jobs: # 主体字段，表示执行的一项或多项任务
     runs-on: ubuntu-latest
     steps:
       - name: print
-        run: |
+        run: | # 运行命令
           echo This is second job
 ```
 ### Go项目构建与测试
