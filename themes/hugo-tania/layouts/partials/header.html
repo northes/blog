@@ -1,14 +1,6 @@
 <nav class="navbar">
     <div class="container">
         <div class="flex">
-            {{ $date := now }}
-            {{ if .GitInfo }}
-            {{ $date = .GitInfo.AuthorDate }}
-            {{ end }}
-
-            <div class="date">
-                {{- $date.Format "January 02, 2006" -}}
-            </div>
             <div>
                 <a class="brand" href="{{ relURL "/" }}">
                     {{ if .Site.Params.titleEmoji }}
