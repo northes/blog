@@ -3,7 +3,7 @@ title: "GitHub Action 入门"
 date: 2022-01-09T23:18:05+08:00
 draft: false
 author : "Northes"
-description: "简介简介"
+description: "GitHub Action 是 GitHub 推出的一个 CI/CD 服务 "
 tags: ["学习笔记","CI/CD"]
 ---
 
