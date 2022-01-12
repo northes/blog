@@ -1,7 +1,7 @@
 ---
 title: "什么是 CI/CD"
 date: 2022-01-11T11:34:36+08:00
-draft: true
+draft: false
 author : "Northes"
 description: "如何理解持续集成、持续交付和持续部署"
 tags: ["学习笔记","CI/CD"]
