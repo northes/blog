@@ -1,7 +1,7 @@
 ---
 title: "GitHub Action 入门"
 date: 2022-01-09T23:18:05+08:00
-draft: true
+draft: false
 author : "Northes"
 description: "简介简介"
 tags: ["学习笔记","CI/CD"]
