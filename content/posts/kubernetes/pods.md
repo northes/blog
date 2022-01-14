@@ -29,3 +29,7 @@ Pod使用过程中的重要字段：
     4. Pod中要访问K8S的API：任何运行在Kubernetes集群上的应用，都必须使用这个ServiceAccountToken里保存的授权信息，也就是Token，才可以合法地访问API Server。因此，通过挂载Volume的方式，把对应权限的ServiceAccountToken这个特殊的Secrete挂载到Pod中即可
 6. 容器是否健康： spec.container.livenessProbe。若不健康，则Pod有可能被重启（可配置策略）
 7. 容器是否可用： spec.container.readinessProbe。若不健康，则service不会访问到该Pod
+
+```kubernetes helm
+
+```
