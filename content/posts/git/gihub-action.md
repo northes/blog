@@ -1,10 +1,10 @@
 ---
-title: "GitHub Action 入门"
+title: "GitHub Action 入门 && 徽章"
 date: 2022-01-09T23:18:05+08:00
 draft: false
 author : "Northes"
-description: "GitHub Action 是 GitHub 推出的一个 CI/CD 服务 "
-tags: ["学习笔记","CI/CD"]
+description: "快速上手 GitHub Action, README 徽章是怎么来的"
+tags: ["学习笔记","CI/CD","GitHub"]
 ---
 
 ## GitHub Action
@@ -103,6 +103,17 @@ jobs:
 - [https://codecov.io](https://codecov.io)
 - 用于展示测试覆盖率 。可在 `Codecov` 的 `Settings` 下的 `Badge` 选项处生成 
 
+### Go代码质量徽章
+![Go Report Card](https://goreportcard.com/badge/github.com/northes/action-test)
+- [https://goreportcard.com/](https://goreportcard.com/)
+- 前提是您的包的 `go.mod` 的 `module` 必须与您的仓库地址一致，否则会提示无法拉取包
+
+### Go包文档徽章
+![Go Reference](https://pkg.go.dev/badge/github.com/northes/action-test.svg)
+- [https://pkg.go.dev/badge/](https://pkg.go.dev/badge/)
+- 包名要求与 `Go代码质量徽章` 的要求一样
+- 会直接跳转到 `pkg.go.dev` 的包文档，文档自动生成(需按照一定的规则，自行 Google )
+
 ### 自定义徽章
 ![](https://img.shields.io/badge/license-MIT-green)
 
@@ -113,3 +124,4 @@ jobs:
 - https://about.codecov.io/
 - https://about.codecov.io/blog/getting-started-with-code-coverage-for-golang/
 - https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html
+- https://github.com/northes/action-test
