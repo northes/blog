@@ -37,6 +37,21 @@ chmod u-w /etc/sudoers
 
 然后再执行 `minikube start --image-mirror-country='cn'` 设置镜像代理。设置后将使用阿里云镜像代理
 
+### 远程访问控制面板
+启动面板
+```shell
+minikube dashboard
+```
+启动代理
+```shell
+kubectl proxy --address='0.0.0.0' --disable-filter=true
+```
+然后将你上面的 http://127.0.0.1:37367 替换成你宿主机的id和port，例如:
+
+http://10.0.19.91:8001//api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/
+
+这样，远程就可以访问了。
+
 ## sealos 离线安装
 https://www.sealyun.com/instructions
 

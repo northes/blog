@@ -7,7 +7,9 @@ description: "简介简介"
 tags: ["学习笔记","Kubernetes"]
 ---
 
-Kuberentes可以理解为操作系统，那么容器就是进程，而Pod就是进程组or虚拟机（几个进程关联在一起）。
+> Pod，是 Kubernetes 的最小的 API 对象。如果换一个更专业的说法：Pod，是 Kubernetes 的原子调度单位
+
+Kubernetes可以理解为操作系统，那么容器就是进程，而Pod就是进程组or虚拟机（几个进程关联在一起）。
 
 Pod的设计之初有两个目的：
 1. 为了处理容器之间的调度关系
