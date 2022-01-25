@@ -1,5 +1,5 @@
 ---
-title: "数据库八股文背诵版"
+title: "数据库八股文背诵版 - 1"
 date: 2021-06-28T01:47:22+08:00
 draft: false
 author : "Northes"
