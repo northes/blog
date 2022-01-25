@@ -8,8 +8,8 @@ enableGitInfo = true
 
 [params]
 titleEmoji = "😃"
-siteKeyword = "northes,Northes,blog"
-siteDesc = "Northes's Blog"
+siteKeyword = "northes,Northes,blog,博客"
+siteDesc = "Northes's Blog,Northes的博客。记录学习笔记以及过程中踩过的坑"
 siteAuthor = "Northes"
 
 [menu]
