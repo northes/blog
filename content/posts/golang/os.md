@@ -1,7 +1,7 @@
 ---
-title: "Go 标准库 OS 详解"
+title: "Go 标准库OS包详解"
 date: 2022-01-25T10:48:23+08:00 
-draft: true 
+draft: false 
 author : "Northes"
 description: "OS 包提供了不依赖平台的操作系统接口函数，错误处理是go风格；调用失败会返回错误值而不是错误码。通常错误值里包含更多信息"
 tags: ["学习笔记","Golang"]
