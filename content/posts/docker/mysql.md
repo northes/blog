@@ -3,7 +3,7 @@ title: "Docker 运行 Mysql"
 date: 2022-01-11T09:11:07+08:00
 draft: true
 author : "Northes"
-description: "简介简介"
+description: "使用Docker运行MySQL"
 tags: ["学习笔记"]
 ---
 

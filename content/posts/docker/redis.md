@@ -3,7 +3,7 @@ title: "Docker 运行 Redis"
 date: 2022-01-11T09:11:02+08:00
 draft: true
 author : "Northes"
-description: "简介简介"
+description: "使用Docker运行Redis"
 tags: ["学习笔记"]
 ---
 

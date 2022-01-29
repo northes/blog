@@ -1,5 +1,5 @@
 ---
-title: "Deployment"
+title: "Kubernetes - Deployment"
 date: 2022-01-14T16:20:06+08:00
 draft: true
 author : "Northes"
