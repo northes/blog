@@ -1,10 +1,10 @@
 ---
-title: "Windows 包管理工具Chocolatey"
+title: "Windows 包管理工具 Chocolatey"
 date: 2022-02-01T21:43:59+08:00
-draft: true
+draft: false
 author : "Northes"
-description: "类似于Node.js的npm。对Windows上的包进行管理"
-tags: ["学习笔记",“Windows”]
+description: "类似于Node.js的npm。可以对Windows上的包进行管理"
+tags: ["学习笔记","Windows"]
 ---
 
 ## 简介
