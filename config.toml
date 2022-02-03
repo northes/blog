@@ -15,7 +15,7 @@ siteAuthor = "Northes"
 [menu]
 header = [
 #    { name = "Articles", url = "/articles/", weight = 1 },
-#    { name = "Tags", url = "/tags/", weight = 2 },
+    { name = "Tags", url = "/tags/", weight = 2 },
     { name = "Projects", url = "/projects/", weight = 3 },
     { name = "About", url = "/about/", weight = 4 },
 ]
