@@ -9,7 +9,8 @@
                     <div class="post-meta">
                         <div>
                             By {{ .Params.author }} on
-                            <time>{{ .Date.Format "January 02, 2006" }}</time>
+                            <time>{{ .Date.Format "January 02, 2006" }}</time> |
+                            <time>Modified on {{ .Lastmod.Format "January 02, 2006" }}</time>
                         </div>
                         <div class="tags">
                             {{ range (.GetTerms "tags") }}
