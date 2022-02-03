@@ -4,7 +4,7 @@ date: 2021-12-04T20:49:13+08:00
 draft: false
 author : "Northes"
 description: "安装必要的运行环境，包括 protoc，kratos，make"
-tags: ["学习笔记","微服务","Kratos","手摸手","Bilibili"]
+tags: ["学习笔记","微服务","go-kratos","手摸手","Bilibili"]
 ---
 
 ## 安装
