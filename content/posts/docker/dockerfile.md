@@ -3,7 +3,7 @@ title: "如何编写 Dockerfile"
 date: 2022-01-11T09:10:16+08:00
 draft: false
 author : "Northes"
-description: "简介简介"
+description: "简单版，多阶构建版，附有配置文件版"
 tags: ["学习笔记","Docker"]
 ---
 
