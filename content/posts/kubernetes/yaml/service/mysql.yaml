@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-svc
+spec:
+  selector:
+    app: mysql
+  type: ClusterIP
+  ports:
+    - port: 33061
+      targetPort: 3306
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-public
+spec:
+  selector:
+    app: redis
+  type: NodePort
+  ports:
+    - port: 6379
+      targetPort: 6379
+      nodePort: 31000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-public
+spec:
+  selector:
+    app: mysql
+  type: NodePort
+  ports:
+    - port: 3306
+      targetPort: 3306
+      nodePort: 32000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-k8s
+spec:
+  selector:
+    app: test-k8s
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30008

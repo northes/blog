@@ -1,16 +1,16 @@
 ---
-title: "Vim"
+title: "Vim 基础入门"
 date: 2022-01-26T09:53:15+08:00
 draft: true
 author : "Northes"
 description: "简介简介"
-tags: ["学习笔记"]
+tags: ["学习笔记","Vim"]
 ---
 
 - 学习网站
 1. https://vim-adventures.com/
 一边玩游戏一边学习
-2. 终端直接键入 `vimtutor`
+2. 已安装 `vim` 环境的终端直接键入 `vimtutor`
 
 ## 其他
 - : 命令模式

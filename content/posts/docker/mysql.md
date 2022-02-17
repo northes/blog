@@ -1,10 +1,10 @@
 ---
-title: "Docker 运行 Mysql"
+title: "使用 Docker 部署 Mysql"
 date: 2022-01-11T09:11:07+08:00
 draft: true
 author : "Northes"
 description: "使用Docker运行MySQL"
-tags: ["学习笔记"]
+tags: ["实践","学习笔记"]
 ---
 
 

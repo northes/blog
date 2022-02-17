@@ -4,7 +4,7 @@ date: 2022-02-01T22:19:00+08:00
 lastmod: 1643899808024
 draft: false
 author : "Northes"
-description: "docker-compose配置文件及常用命令"
+description: "docker compose 配置文件及常用命令"
 tags: ["学习笔记","Docker"]
 ---
 

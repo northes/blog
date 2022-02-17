@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  ports:
+    - port: 80
+      name: web
+  clusterIP: None
+  selector:
+    app: nginx
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: web
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  serviceName: "nginx"
+  podManagementPolicy: Parallel # 并行创建、删除，不必等待
+  # 实现灰度发布
+  updateStrategy:
+    type: RollingUpdate # 设置更新方式为滚动更新
+    rollingUpdate:
+      partition: 2 # 所有序号大于2的才会进行更新。默认的更新方式会倒序删除Pod并更新
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: anjia0532/nginx-slim:0.8
+          ports:
+            - containerPort: 80
+              name: web
+          volumeMounts:
+            - mountPath: /usr/share/nginx/html
+              name: www
+  volumeClaimTemplates:
+    - metadata:
+        name: www
+      spec:
+        accessModes:
+          - "ReadWriteOnce"
+        resources:
+          requests:
+            storage: 1Gi

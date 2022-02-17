@@ -4,7 +4,7 @@ date: 2022-01-13T22:10:50+08:00
 draft: false
 author : "Northes"
 description: "眼见不一定为实 - Go内存模型详解"
-tags: ["学习笔记","翻译","Golang"]
+tags: [翻译","Golang"]
 ---
 
 *翻译整理自 https://go.dev/ref/mem*
