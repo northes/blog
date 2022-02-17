@@ -11,6 +11,7 @@
                             By {{ .Params.author }} on
                             <time>{{ .Date.Format "January 02, 2006" }}</time> |
                             <time>Modified on {{ .Lastmod.Format "January 02, 2006" }}</time>
+                            <span id="busuanzi_container_page_pv" style='display:none'> | <span id="busuanzi_value_page_pv"></span> Hits</span>
                         </div>
                         <div class="tags">
                             {{ range (.GetTerms "tags") }}
