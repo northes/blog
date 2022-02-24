@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: redis-app
+spec:
+  selector:
+    matchLabels:
+      app: redis
+      appCluster: redis-cluster
+  replicas: 6
+  serviceName: "redis-service"
+  template:
+    metadata:
+      labels:
+        app: redis
+        appCluster: redis-cluster
+    spec:
+      containers:
+        - name: redis
+          image: redis
+          command:
+            - redis-server
+          args:
+            - "/etc/redis/redis.conf"
+            - "--protected-mode"
+            - "no"
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "100Mi"
+          ports:
+            - name: redis
+              containerPort: 6379
+              protocol: TCP
+            - name: cluster
+              containerPort: 16379
+              protocol: TCP
+          volumeMounts:
+            - mountPath: "/etc/redis"
+              name: redis-conf
+            - name: redis-data
+              mountPath: "/var/lib/redis"
+      volumes:
+        - name: "redis-conf"
+          configMap:
+            name: "redis-cluster-conf"
+            items:
+              - key: redis-conf
+                path: "redis.conf"
+        - name: "redis-data"
+          emptyDir: {}
+
+
