@@ -7,8 +7,8 @@ spec:
     app: mysql
   type: ClusterIP
   ports:
-    - port: 33061
-      targetPort: 3306
+    - port: 3306 # 本 Service 的端口
+      targetPort: 3306 # Pod 端口
 
 ---
 apiVersion: v1

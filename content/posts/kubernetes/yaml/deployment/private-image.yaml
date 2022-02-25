@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-demo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: k8s-demo
+  template:
+    metadata:
+      labels:
+        app: k8s-demo
+    spec:
+      containers:
+        - name: web
+          image: ccr.ccs.tencentyun.com/my-default/k8s-demo:1.0
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+      imagePullSecrets: # 拉取私有镜像仓库的认证，需要先创建secret
+        - name: docker-tencent

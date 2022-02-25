@@ -1,14 +1,37 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: test-ingress
+  name: k8s-demo
 spec:
+  defaultBackend:
+    service:
+      name: test
+      port:
+        number: 9090
   rules:
-    - host: example.com
+    - host: demo.apihut.com.cn
       http:
         paths:
-          - backend:
+          - path: /
+            pathType: Prefix
+            backend:
               service:
-                name: my-service
+                name: k8s-demo
                 port:
-
+                  number: 8080
+          - path: /bar
+            pathType: Prefix
+            backend:
+              service:
+                name: service2
+                port:
+                  number: 8080
+    - http: # 不指定host，则会将所有不匹配host的流量路由到 service3
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: service3
+                port:
+                  number: 80
