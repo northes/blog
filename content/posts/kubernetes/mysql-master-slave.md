@@ -1,7 +1,7 @@
 ---
 title: "K8S 搭建 Mysql 主从实录"
 date: 2022-02-25T14:27:26+08:00
-draft: true
+draft: false
 author : "Northes"
 description: "一主一从，读写分离"
 tags: ["Kubernetes","MySQL"]
