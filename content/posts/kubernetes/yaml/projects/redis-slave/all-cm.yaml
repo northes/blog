@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-config
+data:
+  master.conf: |
+    port 6379
+  slave.conf: |
+    port 6379
+    slaveof redis-master-0.redis-master 6379
