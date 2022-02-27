@@ -12,6 +12,11 @@ tags: ["学习笔记","Kubernetes"]
 ```shell
 minikube start
 minikube start --nodes 2 -p <node-name>
+# memory以MB为单位。如果之前已经创建集群，需要删除（不用加 --all）
+minikube start --memory=8192 --cpus=4 --kubernetes-version=v1.14.2
+# 删除集群
+minikube delete
+minikube delete --all
 ```
 
 ## 控制面板
@@ -53,6 +58,8 @@ service 的 type 必须是 LoadBalancer
 ```shell
 # 使用独立的终端运行
 minikube tunnel
+# 强制清理
+minikube tunnel --cleanup
 # 查看对应的地址及端口
 kubectl get svc
 ```
