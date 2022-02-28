@@ -1,11 +1,18 @@
 ---
-title: "Kubernetes - Kubectl"
+title: "Kubernetes - Kubectl备忘单"
 date: 2021-12-18T14:46:34+08:00
 draft: false
 author : "Northes"
 description: "K8s学习笔记"
 tags: ["学习笔记","Kubernetes"]
 ---
+
+## 自动补全
+```shell
+# 设置
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+```
+> 不会像 redis-cli 一样，需要敲tab键
 
 ## 应用
 ```shell
@@ -66,6 +73,19 @@ kubectl patch sts web -p '{"spec":{"replicas":3}}'
 kubectl delete statefulset web --cascade=orphan
 # 级联删除（会删除所有Pod，与索引相反顺序删除），不会删除Service
 kubectl delete statefulset web
+# 使用管道输入
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysecret
+type: Opaque
+data:
+  password: $(echo -n "s33msi4" | base64 -w0)
+  username: $(echo -n "jane" | base64 -w0)
+EOF
+# 将文件使用管道输入
+cat xxx.json | kubectl apply -f -
 ```
 
 ## Secret
