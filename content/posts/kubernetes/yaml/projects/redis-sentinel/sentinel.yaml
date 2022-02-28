@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-sentinel
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: redis-sentinel
+  template:
+    metadata:
+      labels:
+        app: redis-sentinel
+    spec:
+      containers:
+        - name: redis
+          image: redis:6.2.6
+          imagePullPolicy: IfNotPresent
+          command:
+            - sh
+          args:
+            - -c
+            - cp /mnt/redis.conf /data/ ; redis-sentinel /data/redis.conf
+          volumeMounts:
+            - mountPath: /mnt/
+              name: conf
+              readOnly: false
+          ports:
+            - containerPort: 26379
+              protocol: TCP
+      volumes:
+        - name: conf
+          configMap:
+            name: redis-config
+            items:
+              - key: sentinel.conf
+                path: redis.conf
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-sentinel
+spec:
+  selector:
+    app: redis-sentinel
+  ports:
+    - port: 26379
+      targetPort: 26379
+      protocol: TCP
