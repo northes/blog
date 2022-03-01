@@ -65,6 +65,8 @@ kubectl rollout pause deployment <name>
 kubectl rollout resume deployment <name>
 # 输出到文件
 kubectl get deployment <name> -o yaml >> ./xxx.yaml
+# 输出指定内容(不清楚结构可以通过get xxx -o json 查看)
+kubectl get po <name> -o jsonpath='{.status.podIP}'
 # 删除全部资源
 kubectl delete all --all
 # 更新指定内容

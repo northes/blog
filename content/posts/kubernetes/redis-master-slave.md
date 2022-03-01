@@ -7,6 +7,8 @@ description: "一主一从，读写分离"
 tags: ["Kubernetes","Redis"]
 ---
 
+*这只是简单的主从搭建示例，不能用于生产。实际应用需配合哨兵或集群搭建*
+
 ## 环境
 - Kubernetes 1.23
 - Redis 6.2.6
