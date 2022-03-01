@@ -1,14 +1,17 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: redis-service
-  labels:
-    app: redis
+  name: redis-cluster
 spec:
-  ports:
-    - name: redis-port
-      port: 6379
-  clusterIP: None
   selector:
-    app: redis
-    appCluster: redis-cluster
+    app: redis-cluster
+  ports:
+    - port: 6379
+      targetPort: 6379
+      protocol: TCP
+      name: redis
+    - port: 16379
+      targetPort: 16379
+      protocol: TCP
+      name: cluster
+  type: LoadBalancer
