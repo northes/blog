@@ -159,4 +159,4 @@ ENTRYPOINT ["/bubble", "conf/config.ini"]
 ## Q&A
 alpine 运行报standard_init_linux.go:228: exec user process caused: no such file or directory
 需要改成
-RUN CGO_ENABLED=0 && go build -o bin/app .
+RUN export CGO_ENABLED=0 && go build -o bin/app .

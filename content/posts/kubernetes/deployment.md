@@ -57,3 +57,5 @@ spec:
         - name: test-k8s # 容器名字
           image: ccr.ccs.tencentyun.com/k8s-tutorial/test-k8s:v1 # 镜像
 ```
+
+通过 volumeMount.subPath 来声明我们只是挂载单个文件，而非整个目录
