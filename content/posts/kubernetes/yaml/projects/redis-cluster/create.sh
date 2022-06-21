@@ -1,0 +1,2 @@
+# 三主三从集群
+kubectl exec -it redis-cluster-0 -- redis-cli -p 6379 --cluster create $(kubectl get pods -l k8s.kuboard.cn/name=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:6379 ') --cluster-replicas 1

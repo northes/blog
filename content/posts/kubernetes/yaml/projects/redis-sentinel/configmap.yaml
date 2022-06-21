@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-config
+data:
+  master.conf: |
+    port 6379
+  slave.conf: |
+    port 6379
+    slaveof redis-master-0.redis-master 6379
+  sentinel.conf: |
+    port 26379
+    dir /data
+    sentinel monitor mymaster redis-master-0.redis-master 6379 2
+    sentinel down-after-milliseconds mymaster 30000
+    sentinel parallel-syncs mymaster 1
+    sentinel failover-timeout mymaster 180000
+    # k8s中部署必须开这个，否则将解析不了 redis-master-0.redis-master
+    # 参考 https://stackoverflow.com/questions/57464443/redis-sentinel-throws-error-cant-resolve-master-instance-hostname
+    sentinel resolve-hostnames yes

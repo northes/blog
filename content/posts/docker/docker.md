@@ -25,7 +25,16 @@ docker tag <old:tag> <new:tag>
 # 镜像详情
 docker inspect
 # 镜像层级历史（镜像是一层一层构建出来的，多阶构建只能查看最终镜像的层级）
-docker history 
+docker history <name or hash>
+docker image history <name or hash>
+# 基于已存在的容器制作镜像
+docker commit <hash> <name:tag>
+# 保存镜像为文件(export 会丢失掉所有的镜像构建历史)
+docker save <name or hash> | gzip > xxx-v1.0.0.tar.gz
+docker export <name or hash> > xxx.tar.gz
+# 从镜像文件载入镜像（import不常用）
+docker load -i xxx.tar.gz
+docker import - <name:tag> xxx.tar.gz
 ```
 
 ## 容器
@@ -51,6 +60,8 @@ docker exec -it <name or hash> bin/sh
 docker exec -it <name or hash> bin/bash
 # 重命名容器
 docker rename <old_name> <new_name>
+# 暂停容器运行
+docker pause <name or hash>
 ```
 
 ## 运行

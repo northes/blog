@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: elasticsearch
+  labels:
+    k8s-app: elasticsearch
+spec:
+  selector:
+    matchLabels:
+      app: elasticsearch
+  serviceName: elasticsearch
+  template:
+    metadata:
+      labels:
+        app: elasticsearch
+    spec:
+      containers:
+        - name: es
+          image: docker.elastic.co/elasticsearch/elasticsearch:8.0.0
+          env:
+            - name: discovery.type
+              value: single-node
+            - name: ES_JAVA_OPTS
+              value: -Xms512m -Xmx512m
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "500Mi"
+          ports:
+            - name: "server"
+              containerPort: 9200
+              protocol: TCP
+            - name: "cluster"
+              containerPort: 9300
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: es-service
+spec:
+  selector:
+    app: elasticsearch
+  type: NodePort
+  ports:
+    - port: 9200
+      targetPort: 9200
+      nodePort: 32763

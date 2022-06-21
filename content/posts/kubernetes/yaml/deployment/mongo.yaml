@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+spec:
+  selector:
+    matchLabels:
+      app: mongo
+  template:
+    metadata:
+      namespace: testapp
+      labels:
+        app: mongo
+    spec:
+      containers:
+        - name: mongo
+          image: mongo:latest
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME  # 设置用户名
+              value: admin
+            - name: MONGO_INITDB_ROOT_PASSWORD  # 设置密码
+              value: '123456'
+          ports:
+            - containerPort: 27017
