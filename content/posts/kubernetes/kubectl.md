@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes - Kubectl备忘单"
+title: "Kubernetes - Kubectl高效使用"
 date: 2021-12-18T14:46:34+08:00
 draft: false
 author : "Northes"
@@ -9,17 +9,24 @@ tags: ["学习笔记","Kubernetes"]
 
 ## 自动补全
 ```shell
-# 设置
+# bash
 echo "source <(kubectl completion bash)" >> ~/.bashrc
+# 别名
+echo "alias 'k'='kubectl'" >> ~/.bashrc
 ```
-> 不会像 redis-cli 一样，需要敲tab键
+> 设置完成需要重新载入，命令：`source ~/.bashrc`
 
-## 应用
+## Deployment
 ```shell
 # 部署应用
 kubectl apply -f xxx.yaml
+# 部署整个目录
+kubectl apply -f .
+# 部署多个
+kubectl apply -f xxx.yml yyy.yml
 # 查看 deployment
 kubectl get deployment
+kubectl get deploy
 # 查看pod(wide以纯文本格式输出，包含附加信息。也可使用json|yaml等其他格式)
 kubectl get pod -o wide
 # 查看pod详情
@@ -90,6 +97,12 @@ EOF
 cat xxx.json | kubectl apply -f -
 ```
 
+## Namespace
+```shell
+# 删除 namespace 下所有资源(namespace 保留)
+kubectl delete all --all -n <namespace>
+```
+
 ## Secret
 ```shell
 # 创建普通的secret
@@ -105,7 +118,7 @@ kubectl get secrets
 
 ## 其他
 ```shell
-# 临时运行一个pod，并进入终端交互，退出会删除
+# 临时运行一个pod，并进入终端交互，并在退出时删除
 kubectl run -i --tty --image busybox:1.28 test --restart=Never --rm
 # busybox不提供curl，可以使用alpine，进入后通过apk安装
 # apk --update add curl
@@ -117,14 +130,11 @@ kubectl run -i --tty --image alpine test --rm
 ```shell
 kubectl api-resources
 ```
-| 全称         | 缩写   |
-| ------------ | ------ |
+| 全称           | 缩写     |
+|--------------|--------|
 | namespaces   | ns     |
 | node         | no     |
 | pod          | po     |
-
-| 全称         | 缩写   |
-| ------------ | ------ |
 | deployment   | deploy |
 | statefulset  | sts    |
 | daemonset    | ds     |
