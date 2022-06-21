@@ -64,7 +64,7 @@ ENV GO111MODULE=on \
 WORKDIR /build
 
 # 将代码复制到容器中
-COPY . .
+COPY .. .
 
 # 将我们的代码编译成二进制可执行文件app
 RUN go build -o app .

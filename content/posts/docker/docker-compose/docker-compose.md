@@ -9,6 +9,7 @@ tags: ["学习笔记","Docker"]
 ---
 
 ## 配置文件
+
 ```yml
 version: '3.1'
 
@@ -29,7 +30,7 @@ services:
     depends_on:
       - db # 这里并不会等到db完全启动才启动，一般是自己实现脚本监听再启动web app
     image: gin_layout:latest
-    build: . # 如果找不到镜像，去哪里寻找Dockerfile
+    build: .. # 如果找不到镜像，去哪里寻找Dockerfile
     restart: always
     ports:
       - 8080:8080 # 宿主机:容器
