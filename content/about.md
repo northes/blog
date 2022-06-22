@@ -10,6 +10,4 @@ author : "Northes"
 *记录学习过程中踩过的坑以及整理的学习笔记*
 
 
-[Github](https://github.com/northes/blog)
-
-<!-- 部署于 [Vercel](https://vercel.com) 且开源于 [Github](https://github.com/northes/blog) -->
+[Github](https://github.com/northes)
