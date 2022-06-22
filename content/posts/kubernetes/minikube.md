@@ -19,7 +19,7 @@ minikube delete
 minikube delete --all
 ```
 
-## 控制面板
+## 仪表盘
 ```shell
 minikube dashboard
 minikube dashboard --url
@@ -42,21 +42,21 @@ minikube image --help
 ## 访问服务
 由于minikube是模拟集群，你的电脑并不是节点，节点是 minikube 模拟出来的，
 所以不能直接在电脑上访问到服务。但可以通过minikube提供的方法进行访问
-### 暴露服务
+### 使用 Kubectl
 ```shell
 # 暴露服务，使用负载均衡器
 kubectl expose deployment k8s-demo --type=LoadBalancer --port=8080
 ```
-### NodePort
+### 使用 Minikube Service
 service 的 type 可以是 NodePort 也可以是 LoadBalancer
 ```shell
-# 设置隧道代理
+# 使用 Minikube Service 转发
 minikube service k8s-demo
 ```
-### LoadBalancer
+### 使用隧道
 service 的 type 必须是 LoadBalancer
 ```shell
-# 使用独立的终端运行
+# 使用隧道进行转发
 minikube tunnel
 # 强制清理
 minikube tunnel --cleanup
