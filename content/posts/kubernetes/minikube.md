@@ -17,6 +17,10 @@ minikube start --memory=8192 --cpus=4 --kubernetes-version=v1.14.2
 # 删除集群
 minikube delete
 minikube delete --all
+# 使用 docker 驱动
+minikube config set driver docker
+minikube start --driver=docker
+
 ```
 
 ## 仪表盘
