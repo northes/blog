@@ -42,7 +42,7 @@ tags: ["学习笔记","Docker","Harbor"]
 设 
 - 部署的 Harbor 域名为 `harbor.god.com`
 - 要拉取的镜像为 `k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0-beta`
-- 如果项目为私有，则需要登录后拉取
+- 项目为私有，则需要 `docker login` 登录后拉取
 ```shell
 docker pull harbor.god.com/k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0-beta
 ```
