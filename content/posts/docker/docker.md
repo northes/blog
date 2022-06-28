@@ -62,6 +62,8 @@ docker exec -it <name or hash> bin/bash
 docker rename <old_name> <new_name>
 # 暂停容器运行
 docker pause <name or hash>
+# 清理无用的镜像、容器、数据卷
+docker system prune -af --volumes 
 ```
 
 ## 运行
@@ -99,7 +101,7 @@ docker run --name nginx-test -p 8080:80 -d nginx
 docker run -itd --name mongo -p 27017:27017 mongo --auth
 ```
 
-## Docker Hub 相关
+## 仓库相关
 ```shell
 # 登录
 docker login
