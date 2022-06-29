@@ -25,6 +25,25 @@ chmod -R 777 /nfs/data
 # 编辑 export 配置文件
 echo "/nfs/data/ *(insecure,rw,sync,no_root_squash)" > /etc/exports
 ```
+以上配置分三个部分：
+
+1. 第一部分就是本地要共享出去的目录 
+2. 第二部分为允许访问的主机（可以是一个 IP 也可以的是一个 IP 段），`*` 代表允许所有的网段访问
+3. 第三部分小括号部分，为权限选项
+
+**权限说明**
+- rw：读写
+- ro：只读
+- sync：同步模式，内存中数据实时写入磁盘
+- async：不同步，把内存中数据定期写入磁盘
+- secure：nfs 通过 1024 以下的安全 TCP、IP 端口发送
+- insecure：nfs 通过 1024 以上的端口发送
+- no_root_squash：root 用户会对共享的目录拥有至高权限控制，就像对本机的目录操作一样。不安全，不建议使用。
+- root_squash：和上面的选项对应，root 用户对共享目录的权限不高，只有普通用户的权限，即限制了 root
+- all_squash：不管使用 nfs 的用户是谁，他的身份都会被限定成为一个指定的普通用户身份
+- anonuid、anongid：要和 root_squash 或 all_squash 一起使用，用于指定使用 nfs 的用户限定的 uid 和 gid，前提是本机的 `/etc/passwd` 中存在这个 uid 和 gid
+- subtree_check：如果共享 `/urs/bin` 之类的子目录时，强制 nfs 检查父目录的权限（默认）
+- no_subtree_check：和上面对应，不检查父目录权限
 
 ### 启动服务
 ```shell
