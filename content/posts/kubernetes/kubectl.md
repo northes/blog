@@ -93,6 +93,26 @@ data:
   password: $(echo -n "s33msi4" | base64 -w0)
   username: $(echo -n "jane" | base64 -w0)
 EOF
+# 行内命令输入
+kubectl apply -f - <<EOF
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: istio-system
+  namespace: istio-system
+  annotations:
+    kubernetes.io/ingress.class: istio
+spec:
+  rules:
+  - host: my-istio-dashboard.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          serviceName: grafana
+          servicePort: 3000
+EOF
 # 将文件使用管道输入
 cat xxx.json | kubectl apply -f -
 ```
