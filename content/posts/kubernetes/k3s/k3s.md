@@ -153,3 +153,24 @@ secrets-encryption: true
 | `/etc/rancher/k3s`            | kube配置文件，k3s配置文件，私有镜像仓库配置文件                  |
 | `/var/lib/rancher/k3s/server` | token 等                                      |
 | `/etc/rancher/node`           | agent 向 server 注册用的 password，后续的请求server都会验证 |
+
+## Q&A
+### 第三方工具无法获取K3s集群信息
+helm，flux 等工具默认会读取 `~/.kube/config` 文件，k3s 初始化并没有将配置文件初始化在这里，需要手动复制
+
+```shell
+mkdir ~/.kube
+cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+```
+
+### 通过配置文件关闭K3s自带组件
+不需要部署的组件，删除任何已部署的组件，可以在 `/etc/rancher/k3s` 目录下新建 `config.yaml` 配置文件进行禁用
+```yaml
+disable: traefik
+```
+多个
+```yaml
+disable: traefik,metrics-server
+```
+支持的值
+> coredns, servicelb, traefik,local-storage, metrics-server
