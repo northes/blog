@@ -150,7 +150,7 @@ secrets-encryption: true
 | 目录                            | 解释                                           |
 |-------------------------------|----------------------------------------------|
 | `/usr/local/bin`              | 二进制文件与uninstall、killall脚本                    |
-| `/etc/rancher/k3s`            | kube配置文件，k3s配置文件，私有镜像仓库配置文件                  |
+| `/etc/rancher/k3s`            | kube配置文件、k3s配置文件、私有镜像仓库配置文件                  |
 | `/var/lib/rancher/k3s/server` | token 等                                      |
 | `/etc/rancher/node`           | agent 向 server 注册用的 password，后续的请求server都会验证 |
 
