@@ -64,6 +64,8 @@ docker rename <old_name> <new_name>
 docker pause <name or hash>
 # 清理无用的镜像、容器、数据卷
 docker system prune -af --volumes 
+# 清理镜像 -a 删除所有未使用的 -f 强制回收，跳过提示语句
+docker image prune
 ```
 
 ## 运行
