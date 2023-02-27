@@ -1,9 +1,9 @@
 ---
-title: "LXC Docker"
+title: "LXC 下无法启动 Containerd"
 date: 2023-02-27T14:26:15+08:00
-draft: true
+draft: false
 author : "Northes"
-description: "LXC 容器使用 Docker，搭建 K3s，K8s 集群"
+description: "LXC 容器使用 Docker，Containerd，搭建 K3s，K8s 集群时无法启动的解决方法"
 tags: ["学习笔记","PVE"]
 ---
 
