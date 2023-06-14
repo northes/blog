@@ -24,7 +24,7 @@ https://github.com/gohugoio/hugo
 ### TOML 格式
 
 ```toml
-baseURL = "https://northes.co/"
+baseURL = "https://northes.io/"
 languageCode = "zh-cn"
 title = "Northes"
 theme = "hugo-tania"

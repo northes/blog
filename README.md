@@ -1,6 +1,6 @@
 # Northes 的博客
 
-https://northes.co/
+https://northes.io/
 
 欢迎围观我的踩坑日记
 
