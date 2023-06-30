@@ -10,8 +10,9 @@ layout: "single"
 <a href="https://vanswo.net/" target="_blank">vanswo.net</a>
 
 ##### APIHut
-<a href="https://apihut.co/" target="_blank">apihut.co</a>
-Docs: <a href="https://docs.apihut.co/" target="_blank">apihut.co</a>
+API: <a href="https://apihut.co/" target="_blank">apihut.co</a>
+<br>
+Docs: <a href="https://docs.apihut.co/" target="_blank">docs.apihut.co</a>
 
 ##### 今天食什么？
 <a href="https://hungry.northes.io/" target="_blank">hungry.northes.io</a>
