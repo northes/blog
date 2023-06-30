@@ -10,10 +10,15 @@ layout: "single"
 <a href="https://vanswo.net/" target="_blank">vanswo.net</a>
 
 ##### APIHut
-<a href="https://apihut.net/" target="_blank">apihut.net</a>
+<a href="https://apihut.co/" target="_blank">apihut.co</a>
+Docs: <a href="https://docs.apihut.co/" target="_blank">apihut.co</a>
+
+##### 今天食什么？
+<a href="https://hungry.northes.io/" target="_blank">hungry.northes.io</a>
+
 
 ##### 屏幕时钟
-<a href="https://clock.northes.co/" target="_blank">clock.northes.co</a>
+<a href="https://clock.northes.io/" target="_blank">clock.northes.io</a>
 
 ##### JsonHub
 <a href="https://jsonhut.com/" target="_blank">jsonhut.com</a>
