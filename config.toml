@@ -4,7 +4,7 @@ title = "Northes"
 theme = "hugo-tania"
 enableRobotsTXT = true
 paginate = 10
-enableGitInfo = true
+enableGitInfo = false
 
 [params]
 titleEmoji = "😃"
