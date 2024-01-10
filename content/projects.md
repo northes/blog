@@ -17,6 +17,8 @@ Docs: <a href="https://docs.apihut.co/" target="_blank">docs.apihut.co</a>
 ##### 今天食什么？
 <a href="https://hungry.northes.io/" target="_blank">hungry.northes.io</a>
 
+##### 这份工作值不值？
+<a href="https://work-worth.vercel.app/" target="_blank">work-worth.vercel.app</a>
 
 ##### 屏幕时钟
 <a href="https://clock.northes.io/" target="_blank">clock.northes.io</a>
