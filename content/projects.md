@@ -10,7 +10,7 @@ layout: "single"
 
 Go SDK for moonshot kimi
 
-<a href="https://github.com/northes/go-moonshot" target="_blank">github.com/northes</a>
+<a href="https://github.com/northes/go-moonshot" target="_blank">github.com/northes/go-moonshot</a>
 
 ##### 万事屋题库（Vanswo）
 <a href="https://vanswo.net/" target="_blank">vanswo.net</a>
