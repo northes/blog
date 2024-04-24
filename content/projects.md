@@ -6,6 +6,12 @@ author: "Northes"
 layout: "single"
 ---
 
+#### go-moonshot
+
+Go SDK for moonshot kimi
+
+<a href="https://github.com/northes/go-moonshot" target="_blank">github.com/northes</a>
+
 ##### 万事屋题库（Vanswo）
 <a href="https://vanswo.net/" target="_blank">vanswo.net</a>
 
@@ -14,7 +20,7 @@ API: <a href="https://apihut.co/" target="_blank">apihut.co</a>
 <br>
 Docs: <a href="https://docs.apihut.co/" target="_blank">docs.apihut.co</a>
 
-##### 今天食什么？
+##### 今日食咩耶？
 <a href="https://hungry.northes.io/" target="_blank">hungry.northes.io</a>
 
 ##### 这份工作值不值？
