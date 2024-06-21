@@ -16,7 +16,7 @@ tags: ["Golang","面试","八股文"]
 ```
 取值范围为 \[n:m\)
 
-## Struct 能否比较
+## 相同 Struct 能否比较
 
 可比较的类型：Integer，Floating-point，String，Boolean，Complex(复数型)，Pointer，Channel，Interface，Array
 
@@ -56,6 +56,34 @@ tags: ["Golang","面试","八股文"]
 ## Struct 可以作为 Map 的 Key 吗？
 
 Struct 必须可比较才可以作为 Map 的 Key
+
+## Context 的使用场景
+
+- 值传递
+- 超时控制
+- 取消控制
+
+## GMP 模型
+
+G：协程，goroutine
+M：线程，Thread
+P：调度器，Processor
+
+除了GMP外，还有一个全局协程队列
+
+### GM模型
+
+直接从全局协程队列里获取G，由于内核线程M是可以同时存在多个的，因此访问的时候还需要加锁解决并发问题。全局协程队列里的大锁在并发量大的时候会成为性能瓶颈。
+
+### GMP模型
+
+1. 引入了P，P带有本地协程队列，获取时无需加锁，M需要获取G的时候，直接从P里获取。
+2. 新建G时，新G会优先加入P的本地队列，如果本地队列满了，会把本地队列的一半G移动到全局队列。
+3. P的本地队列为空时，从全局队列里取
+4. 全局队列为空时，M会从其他P的本地队列里偷(stealing)一半G放在自己的P本地队列。
+5. M运行完G后，会从P获取下一个G，不断重复。
+
+### 
 
 ## 参考
 
