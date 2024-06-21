@@ -192,4 +192,31 @@ K8s 的镜像下载策略有三种：Always、Never、IFNotPresent。
 
 - NFS
 - LocalPath
-- 
+
+## K8s 中的资源对象？
+
+- Pod
+- Node
+- Namespace
+- Service
+- Volume
+- PersistentVolume
+- Deployment
+- Secret
+- StatefulSet
+- DaemonSet
+- ServiceAccount
+- ReplicationController
+- ReplicaSet
+- Job
+- CronJob
+- SecurityContext
+- ResourceQuota
+- LimitRange
+- HorizontalPodAutoscaling
+- Ingress
+- ConfigMap
+- Label
+- CustomResourceDefinition
+- Role
+- ClusterRole
