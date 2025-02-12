@@ -4,7 +4,6 @@ title = "Northes"
 theme = "hugo-tania"
 enableRobotsTXT = true
 enableGitInfo = false
-
 [pagination]
 pzgerSize = 10
 
