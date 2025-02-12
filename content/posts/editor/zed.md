@@ -78,6 +78,23 @@ zed main.go
 >
 > \- [https://zed.dev/docs/git](https://zed.dev/docs/git)
 
+**一个替代方案**
+
+在配置文件中新增
+
+```json
+{
+  "terminal": {
+    "env": {
+      "EDITOR": "zed --wait"
+    }
+  }
+}
+```
+
+如此一来，使用命令行进行 commit 的时候，会自动打开 Zed 进行编辑，并且可使用 GitHub Copilot 进行辅助填写。再配合以插件 `git-firefly`
+以支持 git commit message 高亮，体验会更好。
+
 ## 美化
 
 - 2025.2.05 的更新中，支持了图标主题
@@ -225,10 +242,28 @@ zed main.go
 2. 尽管支持 LSP 语言服务器和 Github Copilot, 但是大型项目的自动提示和补全还是仅仅展示提示，而没有频率、相关性推荐等优化，体验上还是有一定的差距。
 2. 插件生态还不是很成熟，原生体验没有很好，相比 vscode 来说，缺少很多能拓展使用体验的插件，比如`Markdown-all-in-one`。
 
+## 一个开发场景
+
+需要在文件末尾新增一行代码，并提交到 Git 仓库。
+
+**前提**
+
+- 处于 vim 模式下
+- 已配置使用 Zed 编辑 commit 信息
+- 已配置 GitHub Copilot
+
+**步骤**
+
+1. `GG` 定位到文件末尾，`o` 新增一行
+2. `Command + J` 打开终端，`git add .` 添加，`git commit` 打开 Zed 编辑提交信息
+3. 编辑完后 `Shift + :` 并输入 `wq` 保存退出
+4. `Command + J` 回到终端，`git push` 提交
+
+> 以上全程只需要键盘操作，不需要鼠标，且每一个输入场景（代码、commit信息）都能配合 Github Copilot 进行代码补全
+
 ## 最后
 
 Zed 是一个很有潜力的编辑器，很轻，驾驶感受很好，原生支持经过打磨的 vim 模式，更新速度也很快。本人正在逐步提高 Zed 的使用频率，更深入体验，并随时更新本文 😇
-
 
 ## 参考
 
