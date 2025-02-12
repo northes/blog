@@ -1,7 +1,7 @@
 ---
 title: "uni-app 中使用微信小程序原生组件（TDesign）"
 date: 2025-02-10T12:26:55+08:00
-draft: true
+draft: false
 author : "northes"
 description: "在 uni-app 中使用 TDesign 的微信小程序原生组件库"
 tags: ["uni-app","t-design","TDesign", "前端"]
