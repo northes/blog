@@ -3,7 +3,7 @@ title: "Zed 折腾指北"
 date: 2025-02-12T10:56:13+08:00
 draft: false
 author: "northes"
-description: "快速上手高性能编辑器 Zed 的配置与使用指南"
+description: "快速上手高性能编辑器 Zed 的配置与使用指南，示例配置，推荐安装的插件"
 tags: ["编辑器", "Zed"]
 ---
 
@@ -264,6 +264,40 @@ zed main.go
 ## 最后
 
 Zed 是一个很有潜力的编辑器，很轻，驾驶感受很好，原生支持经过打磨的 vim 模式，更新速度也很快。本人正在逐步提高 Zed 的使用频率，更深入体验，并随时更新本文 😇
+
+## 推荐安装的插件
+
+**通用**
+
+- cspell: 拼写检查
+
+**语法高亮**
+
+- git-firefly: git commit message 高亮
+- log: 日志高亮
+- marksman: markdown [marksman](https://github.com/artempyanykh/marksman)的 zed 集成
+- html
+- dockerfile
+- sql
+- vue
+- make
+- svelte
+- astro
+- docker-compose
+- gosum
+- unocss
+- csv
+- env
+
+> 用到什么语言就安装对应的语法高亮插件即可，覆盖很全
+
+**主题**
+
+- material-icon-theme: 图标主题
+
+- one-dark-darkened
+- intellij-newui-theme
+- fleet-themes
 
 ## 参考
 
