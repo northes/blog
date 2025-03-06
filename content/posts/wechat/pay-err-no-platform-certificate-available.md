@@ -1,5 +1,5 @@
 ---
-title: "微信报错：无可用平台证书 解决方案"
+title: "微信支付报错：无可用平台证书 解决方案"
 date: 2025-03-06T17:48:28+08:00
 draft: false
 author : "northes"
