@@ -53,15 +53,47 @@ openssl x509 -in apiclient_cert.pem -noout -serial
 官方提供的 SDK
 
 ```go
+package main
+
+import (
+	"context"
+
+	"github.com/rs/zerolog/log"
+	"github.com/wechatpay-apiv3/wechatpay-go/core"
+	"github.com/wechatpay-apiv3/wechatpay-go/core/option"
+	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+)
+
+func main() {
+	ctx := context.Background()
+	mchId := "xxx"           // 商户号
+	mchCertSerialNo := "xxx" // 商户证书序列号
+	publicKeyId := "xxx"     // 公钥ID
+
+	// 载入私钥
+	mchPrivateKey, err := utils.LoadPrivateKeyWithPath("xxx_key.pem")
+	if err != nil {
+		log.Fatal().Err(err).Msg("load private key failed")
+	}
+
+	// 载入公钥
+	mchPublicKey, err := utils.LoadPublicKeyWithPath("xxx.pem")
+	if err != nil {
+		log.Fatal().Err(err).Msg("load public key failed")
+	}
+
 	// 初始化客户端
 	opts := []core.ClientOption{
-		option.WithWechatPayPublicKeyAuthCipher(mchId, mchCertificateSerialNumber, mchPrivateKey, publicKeyId, mchPublicKey),
-		// option.WithWechatPayAutoAuthCipher(mchId, mchCertificateSerialNumber, mchPrivateKey, mchAPIv3Key),
+		option.WithWechatPayPublicKeyAuthCipher(mchId, mchCertSerialNo, mchPrivateKey, publicKeyId, mchPublicKey),
 	}
+
 	client, err := core.NewClient(ctx, opts...)
 	if err != nil {
-		log.Fatal().Err(err).Msg("init client failed")
+		log.Error().Err(err).Msg("init client failed")
 	}
+
+	_ = client
+}
 ````
 
 第三方 SDK （go-pay）
@@ -69,6 +101,7 @@ openssl x509 -in apiclient_cert.pem -noout -serial
 ```go
 import (
 	"github.com/go-pay/gopay"
+	"github.com/rs/zerolog/log"
 	"github.com/go-pay/gopay/wechat/v3"
 )
 
