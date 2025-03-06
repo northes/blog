@@ -52,6 +52,8 @@ openssl x509 -in apiclient_cert.pem -noout -serial
 
 官方提供的 SDK
 
+> github.com/wechatpay-apiv3/wechatpay-go v0.2.20
+
 ```go
 package main
 
@@ -98,11 +100,13 @@ func main() {
 
 第三方 SDK （go-pay）
 
+> github.com/go-pay/gopay v1.5.109
+
 ```go
 import (
 	"github.com/go-pay/gopay"
-	"github.com/rs/zerolog/log"
 	"github.com/go-pay/gopay/wechat/v3"
+	"github.com/rs/zerolog/log"
 )
 
 func main(){
