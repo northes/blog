@@ -4,7 +4,7 @@ date: 2025-03-06T17:22:13+08:00
 draft: false
 author : "northes"
 description: "关于 Appsmith 的吐槽"
-tags: ["吐槽"]
+tags: ["吐槽","Appsmith"]
 ---
 
 最近在项目中用到了 Appsmith 作为管理后台，初上手感觉还不错，但是用久了发现了一些问题，这里记录（吐槽）一下。
