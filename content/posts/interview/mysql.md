@@ -1,10 +1,13 @@
 ---
-title: "数据库八股文背诵版 - 1"
+title: 数据库八股文背诵版 - 1
 date: 2021-06-28T01:47:22+08:00
-draft: true
-author : "Northes"
-description: "数据库面试题"
-tags: ["MySQL","八股文","面试"]
+draft: false
+author: Northes
+description: 数据库面试题
+tags:
+  - MySQL
+  - 八股文
+  - 面试
 ---
 
 

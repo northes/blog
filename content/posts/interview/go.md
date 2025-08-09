@@ -1,10 +1,13 @@
 ---
-title: "Golang 面试八股文"
+title: Golang 面试八股文
 date: 2024-06-21T01:57:14+08:00
-draft: true
-author : "northes"
-description: "Golang 面试八股文"
-tags: ["Golang","面试","八股文"]
+draft: false
+author: northes
+description: Golang 面试八股文
+tags:
+  - Golang
+  - 面试
+  - 八股文
 ---
 
 ## 切片取值
