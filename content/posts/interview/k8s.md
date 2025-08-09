@@ -1,10 +1,14 @@
 ---
-title: "K8s 面试八股文"
+title: K8s 面试八股文
 date: 2024-06-21T00:49:39+08:00
-draft: true
-author : "northes"
-description: "K8s 面试八股文"
-tags: ["面试","八股文","K8s","Kubernetes"]
+draft: false
+author: northes
+description: K8s 面试八股文
+tags:
+  - 面试
+  - 八股文
+  - K8s
+  - Kubernetes
 ---
 
 
