@@ -1,0 +1,2 @@
+{{- $out := dict "title" .Site.Title "baseURL" .Site.BaseURL "language" .Site.Language.Locale -}}
+{{- $out | jsonify -}}

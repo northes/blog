@@ -1,9 +1,16 @@
 baseURL = "https://northes.io/"
-languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"
 title = "Northes"
+
 theme = "hugo-tania"
 enableRobotsTXT = true
 enableGitInfo = false
+
+[languages.zh-cn]
+label = "简体中文"
+weight = 1
+locale = "zh-CN"
+
 [pagination]
 pzgerSize = 10
 
@@ -12,6 +19,9 @@ titleEmoji = "😃"
 siteKeyword = "northes,Northes,blog,博客"
 siteDesc = "Northes's Blog,Northes的博客。记录学习笔记以及过程中踩过的坑"
 siteAuthor = "Northes"
+
+[params.author]
+name = "Northes"
 
 [menu]
 header = [
