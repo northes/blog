@@ -1,0 +1,88 @@
+{{- $name := or (.Get 0) "" | strings.TrimSpace -}}
+{{- if eq $name "" -}}
+  {{- errorf "excalidraw: 缺少文件名，用法：{{< excalidraw \"图.excalidraw\" >}}" -}}
+{{- end -}}
+{{- $path := path.Join "content" .Page.File.Dir $name -}}
+{{- if not (fileExists $path) -}}
+  {{- errorf "excalidraw: 找不到文件 %s（相对当前文章目录）" $path -}}
+{{- end -}}
+{{- $raw := readFile $path -}}
+{{- $b64 := $raw | base64Encode -}}
+{{- $excalUtilsURL := relURL "vendor/excalidraw-utils-0.1.2.min.js" -}}
+{{- if not (.Page.Scratch.Get "excalidrawRoStyle") -}}
+  {{- .Page.Scratch.Set "excalidrawRoStyle" true -}}
+<style>
+.excalidraw-readonly {
+  display: block;
+  width: 100%;
+  max-width: min(100%, 100vw);
+  box-sizing: border-box;
+  margin: 1rem auto;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+.excalidraw-readonly svg {
+  display: block;
+  width: auto !important;
+  max-width: min(100%, 100vw) !important;
+  height: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+</style>
+{{- end -}}
+<div class="excalidraw-readonly" data-excalidraw-b64="{{ $b64 }}" data-excalidraw-lib="{{ $excalUtilsURL }}"></div>
+<script>
+(function () {
+  var el = document.currentScript && document.currentScript.previousElementSibling;
+  if (!el || !el.getAttribute("data-excalidraw-b64")) return;
+  var b64 = el.getAttribute("data-excalidraw-b64");
+  var libUrl = el.getAttribute("data-excalidraw-lib");
+  if (!b64 || !libUrl) return;
+
+  function paint() {
+    if (!window.ExcalidrawUtils || !el) return;
+    try {
+      var data = JSON.parse(atob(b64));
+      var out = window.ExcalidrawUtils.exportToSvg(data);
+      Promise.resolve(out).then(function (svg) {
+        if (!el || !svg) return;
+        el.innerHTML = "";
+        el.appendChild(svg);
+      }).catch(function (err) {
+        console.error("excalidraw shortcode:", err);
+        if (el) el.textContent = "Excalidraw 图渲染失败，请打开控制台查看原因。";
+      });
+    } catch (e) {
+      console.error("excalidraw shortcode:", e);
+      el.textContent = "Excalidraw 图渲染失败，请打开控制台查看原因。";
+    }
+  }
+
+  window._excalRo = window._excalRo || { pending: [], loading: false };
+  if (window.ExcalidrawUtils) {
+    paint();
+    return;
+  }
+  window._excalRo.pending.push(paint);
+  if (window._excalRo.loading) return;
+  window._excalRo.loading = true;
+  var s = document.createElement("script");
+  s.src = libUrl;
+  s.async = true;
+  s.onload = function () {
+    window._excalRo.loading = false;
+    var q = window._excalRo.pending.splice(0);
+    q.forEach(function (fn) {
+      fn();
+    });
+  };
+  s.onerror = function () {
+    window._excalRo.loading = false;
+    if (el) el.textContent = "无法加载 Excalidraw 渲染库（请确认 static/vendor/excalidraw-utils-0.1.2.min.js 已部署）。";
+  };
+  document.head.appendChild(s);
+})();
+</script>
