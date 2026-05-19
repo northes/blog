@@ -4,7 +4,7 @@ date: 2026-05-14T10:10:15+08:00
 draft: false
 author: "northes"
 description: "RAG（Retrieval-Augmented Generation，检索增强生成）的基本原理"
-tags: [ "学习笔记","LLM" ]
+tags: [ "学习笔记","LLM","Agent" ]
 ---
 
 RAG（Retrieval-Augmented Generation），中文通常译作“检索增强生成”。

@@ -1,5 +1,5 @@
 ---
-title: "GMP 模型"
+title: "Go 的 GMP 模型"
 date: 2022-01-30T21:19:46+08:00
 draft: true
 author : "Northes"
