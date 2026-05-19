@@ -1,7 +1,7 @@
 ---
 title: "Claude Code 代码检索选型思考"
 date: 2026-05-19T14:50:39+08:00
-draft: true
+draft: false
 author: "northes"
 description: "为什么 Claude Code 不使用 RAG 而是直接使用 grep"
 tags: ["学习笔记", "Agent", "Claude Code"]
