@@ -12,3 +12,6 @@ node_modules/
 public/
 resources/
 .vercel
+
+# Agent
+.claude
