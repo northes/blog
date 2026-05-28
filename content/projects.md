@@ -12,14 +12,15 @@ layout: "single"
 
 <a href="https://zwbgj.com/" target="_blank">zwbgj.com</a>
 
-##### 万事屋题库（Vanswo）
-
-<a href="https://vanswo.net/" target="_blank">vanswo.net</a>
-
 ##### APIHut
 API: <a href="https://apihut.co/" target="_blank">apihut.co</a>
 <br>
 Docs: <a href="https://docs.apihut.co/" target="_blank">docs.apihut.co</a>
+
+##### 万事屋题库（已下线）
+
+<a href="https://vanswo.net/" target="_blank">vanswo.net</a>
+
 
 #### 开源项目
 
@@ -32,6 +33,11 @@ Go SDK for moonshot kimi
 
 #### 娱乐项目
 
+##### 旅行规划 Agent
+
+<a href="https://travel.northes.io/" target="_blank">travel.northes.io</a>
+
+<!--
 ##### 今日食咩耶？
 <a href="https://hungry.northes.io/" target="_blank">hungry.northes.io</a>
 
@@ -42,4 +48,4 @@ Go SDK for moonshot kimi
 <a href="https://clock.northes.io/" target="_blank">clock.northes.io</a>
 
 ##### JsonHub
-<a href="https://jsonhut.com/" target="_blank">jsonhut.com</a>
+<a href="https://jsonhut.com/" target="_blank">jsonhut.com</a>-->
