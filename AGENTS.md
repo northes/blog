@@ -87,4 +87,4 @@ tags: ["学习笔记", "标签2"]
 
 - `<type>` 为 `feat` / `fix` / `docs` / `style` / `refactor` / `test` / `chore` 之一。
 - `<scope>` 为变更范围（如文件名、模块名）。
-- `<subject>` 为祈使句式简短描述，不超过 72 字符。
+- `<subject>` 为祈使句式简短描述，不超过 72 字符，使用中文。
