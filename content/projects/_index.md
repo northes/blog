@@ -2,7 +2,7 @@
 title: "Projects"
 layout: "projects"
 cascade:
-  - _target:
+  - target:
       kind: page
     build:
       render: never

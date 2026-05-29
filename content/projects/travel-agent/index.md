@@ -6,4 +6,5 @@ link: "https://travel.northes.io/"
 linkText: "查看项目"
 highlight: 1
 weight: 10
+image: https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEUtzhqGTvg0ENvUZrIPtgoEyutuwNpjgACSSYAAqpNyFQT-4zf_skasjsE.png
 ---

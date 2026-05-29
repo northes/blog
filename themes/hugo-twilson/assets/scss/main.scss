@@ -269,6 +269,46 @@ video {
   font-size: 0.9375rem;
 }
 
+.highlight-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 0;
+  padding-top: 0.1rem;
+}
+
+.highlight-card__body h3 {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.highlight-card__body p {
+  margin: 0;
+  max-width: 60ch;
+  line-height: 1.75;
+}
+
+.highlight-card__tag {
+  margin-bottom: 0;
+}
+
+.highlight-card__link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: 0.1rem;
+}
+
+@media (min-width: 768px) {
+  .highlight-card__body {
+    min-height: 100%;
+  }
+
+  .highlight-card__link {
+    margin-top: auto;
+  }
+}
+
 .home-posts {
   margin-top: 5rem;
 }
