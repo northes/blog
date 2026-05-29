@@ -1,0 +1,11 @@
+name = "Hugo Twilson"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "Minimal portfolio and blog theme inspired by twilson.net. Configure via [params.twilson] in config.toml."
+homepage = "https://github.com/northes/blog"
+tags = ["blog", "portfolio", "minimal"]
+features = ["blog", "portfolio"]
+min_version = "0.112.0"
+
+[author]
+  name = "northes"

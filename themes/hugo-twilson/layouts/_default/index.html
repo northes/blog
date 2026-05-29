@@ -1,0 +1,82 @@
+{{ define "main" }}
+{{ $tw := .Site.Params.twilson | default dict }}
+{{ $allProjects := where .Site.RegularPages "Section" "projects" }}
+{{ $homeProjects := sort (where $allProjects "Params.highlight" "ge" 0) "Params.highlight" }}
+<div class="page-shell home">
+    <section class="home-hero animate-blur-in" style="animation-delay: 0s">
+        <h1 class="home-hero__title">
+            <span data-blur-text="{{ .Site.Title }}"></span>
+        </h1>
+        {{ with $tw.role }}
+        <span class="home-hero__role">
+            <span data-blur-text="{{ . }}"></span>
+        </span>
+        {{ end }}
+        <div class="home-hero__intro animate-blur-in" style="animation-delay: 1s">
+            <p>
+                Engineer &times; <span class="tech-item"><img class="tech-item__icon" src="{{ `/icons/tech/claude.svg` | relURL }}" alt="" width="18" height="18" aria-hidden="true">Claude Code</span>.
+                Building magical software with
+                <span class="tech-item"><img class="tech-item__icon" src="{{ `/icons/tech/go.svg` | relURL }}" alt="" width="18" height="18" aria-hidden="true">Go</span>,
+                <span class="tech-item"><img class="tech-item__icon" src="{{ `/icons/tech/typescript.svg` | relURL }}" alt="" width="18" height="18" aria-hidden="true">TypeScript</span>,
+                <span class="tech-item"><img class="tech-item__icon" src="{{ `/icons/tech/svelte.svg` | relURL }}" alt="" width="18" height="18" aria-hidden="true">Svelte</span>,
+                <span class="tech-item"><img class="tech-item__icon" src="{{ `/icons/tech/tailwindcss.svg` | relURL }}" alt="" width="18" height="18" aria-hidden="true">TailwindCSS</span>
+                &mdash; on
+                <span class="tech-item"><img class="tech-item__icon" src="{{ `/icons/tech/kubernetes.svg` | relURL }}" alt="" width="18" height="18" aria-hidden="true">Kubernetes</span>,
+                <span class="tech-item"><img class="tech-item__icon" src="{{ `/icons/tech/docker.svg` | relURL }}" alt="" width="18" height="18" aria-hidden="true">Docker</span>
+                &amp;
+                <span class="tech-item"><img class="tech-item__icon" src="{{ `/icons/tech/cloudflare.svg` | relURL }}" alt="" width="18" height="18" aria-hidden="true">Cloudflare</span>.
+            </p>
+        </div>
+    </section>
+
+    {{ if $homeProjects }}
+    <section class="home-highlights">
+        <h2 class="section-label animate-blur-in" style="animation-delay: 1.3s">Cooking</h2>
+        <div class="home-highlights__grid">
+            {{ range $i, $page := $homeProjects }}
+            {{ $delay := add 1.3 (mul $i 0.1) }}
+            <div class="animate-blur-in" style="animation-delay: {{ $delay }}s">
+                {{ partial "highlight-card.html" $page }}
+            </div>
+            {{ end }}
+        </div>
+        {{ $projectsLinkDelay := add 1.3 (mul (len $homeProjects) 0.1) }}
+        <p class="section-more animate-blur-in" style="animation-delay: {{ $projectsLinkDelay }}s">
+            <a href="{{ "/projects/" | relLangURL }}">查看全部项目 →</a>
+        </p>
+    </section>
+    {{ end }}
+
+    {{ $recentCount := default 10 $tw.showRecentPosts }}
+    {{ if gt $recentCount 0 }}
+    {{ $sections := default (slice "posts") $tw.mainSections }}
+    {{ $posts := where .Site.RegularPages "Section" "in" $sections }}
+    {{ $posts = $posts.ByDate.Reverse | first $recentCount }}
+    {{ if $posts }}
+    <section class="home-posts animate-blur-in" style="animation-delay: 1.5s">
+        <h2 class="section-label">Recent Posts</h2>
+        <ul class="post-list">
+            {{ range $posts }}
+            <li class="post-list__item">
+                <time class="post-list__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+                <a href="{{ .RelPermalink }}"><span class="post-list__title">{{ .Title }}</span></a>
+            </li>
+            {{ end }}
+        </ul>
+        <p class="section-more"><a href="{{ "/articles/" | relLangURL }}">查看全部文章 →</a></p>
+    </section>
+    {{ end }}
+    {{ end }}
+
+    {{ with .Site.Params.github }}
+    <section class="home-links animate-blur-in" style="animation-delay: 1.6s">
+        <h2 class="section-label">Links</h2>
+        <ul class="home-links__list">
+            <li>
+                <a href="{{ . }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
+        </ul>
+    </section>
+    {{ end }}
+</div>
+{{ end }}

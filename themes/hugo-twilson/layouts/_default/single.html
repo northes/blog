@@ -1,0 +1,47 @@
+{{ define "main" }}
+<article class="page-shell article">
+    {{ partial "back-home.html" . }}
+    <header class="article-header">
+        <h1>{{ .Title }}</h1>
+        <div class="article-meta">
+            {{ if not .Date.IsZero }}
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+            {{ end }}
+            {{ with .Params.author }}
+            <span>{{ . }}</span>
+            {{ end }}
+            {{ with (.GetTerms "tags") }}
+            <div class="article-tags">
+                {{ range . }}
+                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                {{ end }}
+            </div>
+            {{ end }}
+            <span id="busuanzi_container_page_pv" style="display:none"> | <span id="busuanzi_value_page_pv"></span> 阅读</span>
+        </div>
+    </header>
+
+    <div class="article-content">
+        {{ .Content }}
+    </div>
+
+    {{ if .Section }}
+    <nav class="article-nav" aria-label="文章导航">
+        {{ with .PrevInSection }}
+        <a rel="prev" href="{{ .RelPermalink }}">
+            <span class="article-nav__label">上一篇</span>
+            {{ .Title }}
+        </a>
+        {{ end }}
+        {{ with .NextInSection }}
+        <a rel="next" href="{{ .RelPermalink }}">
+            <span class="article-nav__label">下一篇</span>
+            {{ .Title }}
+        </a>
+        {{ end }}
+    </nav>
+    {{ end }}
+</article>
+
+<button type="button" id="back-top" aria-label="返回顶部">↑</button>
+{{ end }}

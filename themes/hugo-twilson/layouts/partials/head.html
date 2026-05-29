@@ -1,0 +1,19 @@
+{{ $tw := .Site.Params.twilson | default dict }}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
+<meta name="keywords" content="{{ .Site.Params.siteKeyword }}">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.siteDesc }}{{ end }}">
+<meta name="author" content="{{ .Site.Params.siteAuthor }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root { --accent: {{ $tw.accentColor | default "#f53003" }}; }</style>
+{{ $style := resources.Get "scss/main.scss" | css.Sass | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ with .OutputFormats.Get "rss" }}
+<link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+{{ end }}

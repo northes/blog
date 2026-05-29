@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ $projects := sort (where .Site.RegularPages "Section" "projects") "Weight" }}
+
+<div class="page-shell">
+    {{ partial "back-home.html" . }}
+    <header class="page-header">
+        <h1>{{ .Title | default "Projects" }}</h1>
+        {{ with .Params.subtitle }}
+        <p class="page-header__subtitle">{{ . }}</p>
+        {{ end }}
+    </header>
+
+    {{ if $projects }}
+    <div class="home-highlights__grid projects-page__grid">
+        {{ range $projects }}
+        {{ partial "highlight-card.html" . }}
+        {{ end }}
+    </div>
+    {{ else }}
+    <p class="page-header__subtitle">暂无项目。</p>
+    {{ end }}
+</div>
+{{ end }}

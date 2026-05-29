@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="page-shell">
+    {{ partial "back-home.html" . }}
+    <header class="page-header">
+        <h1>{{ .Title }}</h1>
+    </header>
+
+    <div class="terms-grid">
+        {{ range .Data.Terms.ByCount }}
+        <a href="{{ .Page.RelPermalink }}">
+            {{ .Page.LinkTitle }}
+            <span class="terms-grid__count">{{ .Count }}</span>
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

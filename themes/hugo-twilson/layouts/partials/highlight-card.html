@@ -1,0 +1,71 @@
+{{ $page := . }}
+{{ $imgParam := $page.Params.image | default $page.Params.media }}
+{{ $videoParam := $page.Params.video }}
+
+{{ $page.Scratch.Set "imgSrc" "" }}
+{{ $page.Scratch.Set "videoSrc" "" }}
+
+{{ if $imgParam }}
+  {{ if or (strings.HasPrefix $imgParam "http://") (strings.HasPrefix $imgParam "https://") (strings.HasPrefix $imgParam "/") }}
+    {{ $page.Scratch.Set "imgSrc" $imgParam }}
+  {{ else }}
+    {{ with $page.Resources.GetMatch $imgParam }}
+      {{ $page.Scratch.Set "imgSrc" (.Fill "800x450").RelPermalink }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $videoParam }}
+  {{ if or (strings.HasPrefix $videoParam "http://") (strings.HasPrefix $videoParam "https://") (strings.HasPrefix $videoParam "/") }}
+    {{ $page.Scratch.Set "videoSrc" $videoParam }}
+  {{ else }}
+    {{ with $page.Resources.GetMatch $videoParam }}
+      {{ $page.Scratch.Set "videoSrc" .RelPermalink }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $imgSrc := $page.Scratch.Get "imgSrc" }}
+{{ $videoSrc := $page.Scratch.Get "videoSrc" }}
+
+{{ if and (not $imgSrc) (not $videoSrc) }}
+  {{ $imgSrc = printf "https://picsum.photos/seed/%s/300/200?grayscale" ($page.Title | urlize) }}
+{{ end }}
+
+<article class="highlight-card">
+    <div class="highlight-card__media"{{ if $videoSrc }} data-highlight-video{{ end }}>
+        {{ if $imgSrc }}
+        <img class="highlight-card__poster" src="{{ $imgSrc | safeURL }}" alt="{{ $page.Title }}" loading="lazy" width="800" height="450">
+        {{ else if not $videoSrc }}
+        <div class="highlight-card__placeholder" aria-hidden="true"></div>
+        {{ end }}
+        {{ if $videoSrc }}
+        <video class="highlight-card__video" playsinline loop preload="metadata"{{ if $imgSrc }} hidden{{ end }}{{ if not $imgSrc }} controls{{ end }}>
+            <source src="{{ $videoSrc | safeURL }}">
+        </video>
+        {{ if and $videoSrc $imgSrc }}
+        <button type="button" class="highlight-card__play" aria-label="播放视频">
+            <span class="highlight-card__play-icon"></span>
+        </button>
+        {{ end }}
+        {{ end }}
+    </div>
+    <div class="highlight-card__body">
+        {{ with $page.Params.tag }}
+        <span class="highlight-card__tag">{{ . }}</span>
+        {{ end }}
+        <h3>{{ $page.Title }}</h3>
+        {{ with $page.Params.description }}
+        <p>{{ . }}</p>
+        {{ else }}
+        {{ with $page.Summary }}
+        <p>{{ . }}</p>
+        {{ end }}
+        {{ end }}
+        {{ with $page.Params.link }}
+        <a class="highlight-card__link" href="{{ . }}" target="_blank" rel="noopener noreferrer">
+            {{ default "查看项目" $page.Params.linkText }}
+        </a>
+        {{ end }}
+    </div>
+</article>

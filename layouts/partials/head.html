@@ -1,0 +1,45 @@
+{{ $tw := .Site.Params.twilson | default dict }}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
+<meta name="keywords" content="{{ .Site.Params.siteKeyword }}">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.siteDesc }}{{ end }}">
+<meta name="author" content="{{ .Site.Params.siteAuthor }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root { --accent: {{ $tw.accentColor | default "#f53003" }}; }</style>
+{{ $style := resources.Get "scss/main.scss" | css.Sass | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ with .OutputFormats.Get "rss" }}
+<link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+{{ end }}
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?bf4ee24df4eb8c453a6edf89fa3cdda9";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VET8LQFS48"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("js", new Date());
+  gtag("config", "G-VET8LQFS48");
+</script>
+<script>
+  (function (c, l, a, r, i, t, y) {
+    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+    t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+  })(window, document, "clarity", "script", "kbqgsd3q1z");
+</script>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({ id: "KSHnbTjBwprTa1Q2", ck: "KSHnbTjBwprTa1Q2", autoTrack: true, screenRecord: true });</script>
