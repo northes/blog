@@ -6,5 +6,5 @@ link: "https://zwbgj.com"
 linkText: "查看项目"
 highlight: 1
 weight: 10
-image: https://i.imgant.com/v2/R3YkKR9.png
+image: https://i.imgant.com/v2/G9zgXkA.png
 ---
