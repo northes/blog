@@ -9,24 +9,22 @@
   --accent: #f53003;
   --font-sans: "Inter", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
   --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
-  --content-width: 42rem;
-  --page-padding: 1rem;
+  --content-width: 48rem;
+  --page-padding-x: 1.5rem;
   --page-padding-top: 3rem;
-  --page-padding-left: 1.5rem;
 }
 
 @media (min-width: 640px) {
   :root {
-    --page-padding: 1.5rem;
+    --page-padding-x: 3rem;
     --page-padding-top: 3rem;
-    --page-padding-left: 3rem;
   }
 }
 
 @media (min-width: 768px) {
   :root {
     --page-padding-top: 6rem;
-    --page-padding-left: 6rem;
+    --page-padding-x: 6rem;
   }
 }
 
@@ -81,11 +79,13 @@ video {
 }
 
 .site-main {
-  padding: var(--page-padding-top) var(--page-padding) 4rem var(--page-padding-left);
+  padding: var(--page-padding-top) var(--page-padding-x) 4rem;
 }
 
 .page-shell {
-  max-width: 72rem;
+  width: 100%;
+  max-width: 56rem;
+  margin-inline: auto;
 }
 
 .home-hero__title {
@@ -193,6 +193,16 @@ video {
 
 .highlight-card + .highlight-card {
   margin-top: 0;
+}
+
+.highlight-card--clickable {
+  cursor: pointer;
+}
+
+.highlight-card--clickable:focus-visible {
+  outline: 2px solid rgba(245, 48, 3, 0.7);
+  outline-offset: 0.35rem;
+  border-radius: 0.5rem;
 }
 
 .highlight-card__media {
@@ -544,7 +554,10 @@ video {
 }
 
 .site-footer {
-  padding: 2rem var(--page-padding) 4rem var(--page-padding-left);
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 2rem var(--page-padding-x) 4rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--foreground-muted);

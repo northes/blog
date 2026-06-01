@@ -27,12 +27,16 @@
 
 {{ $imgSrc := $page.Scratch.Get "imgSrc" }}
 {{ $videoSrc := $page.Scratch.Get "videoSrc" }}
+{{ $cardLink := $page.Params.link }}
 
 {{ if and (not $imgSrc) (not $videoSrc) }}
   {{ $imgSrc = printf "https://picsum.photos/seed/%s/300/200?grayscale" ($page.Title | urlize) }}
 {{ end }}
 
-<article class="highlight-card">
+<article
+    class="highlight-card{{ if $cardLink }} highlight-card--clickable{{ end }}"
+    {{ with $cardLink }}data-card-link="{{ . }}" data-card-target="_blank" tabindex="0" role="link"{{ end }}
+>
     <div class="highlight-card__media"{{ if $videoSrc }} data-highlight-video{{ end }}>
         {{ if $imgSrc }}
         <img class="highlight-card__poster" src="{{ $imgSrc | safeURL }}" alt="{{ $page.Title }}" loading="lazy" width="800" height="450">
@@ -62,7 +66,7 @@
         <p>{{ . }}</p>
         {{ end }}
         {{ end }}
-        {{ with $page.Params.link }}
+        {{ with $cardLink }}
         <a class="highlight-card__link" href="{{ . }}" target="_blank" rel="noopener noreferrer">
             {{ default "查看项目" $page.Params.linkText }}
         </a>
