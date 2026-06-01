@@ -1,6 +1,6 @@
 baseURL = "https://northes.io/"
 defaultContentLanguage = "zh-cn"
-title = "Ethan"
+title = "Ethan Tam"
 theme = "hugo-twilson"
 enableRobotsTXT = true
 enableGitInfo = false
