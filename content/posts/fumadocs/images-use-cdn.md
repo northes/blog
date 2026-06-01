@@ -2,7 +2,7 @@
 title: "Fumadocs 中使用 CDN 加载静态资源，兼容本地显示"
 date: 2026-02-06T15:57:59+08:00
 draft: false
-author : "northes"
+author : "ethan"
 description: "使用 fumadocs.dev 时支持本地 Markdown 编辑器显示和构建后使用 CDN"
 tags: ["学习笔记","Fumadocs","React"]
 ---

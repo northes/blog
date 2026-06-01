@@ -2,7 +2,7 @@
 title: "Golang 安装多版本"
 date: 2021-07-27T20:16:49+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "Golang 安装多版本共存"
 tags: ["学习笔记","Golang"]
 ---

@@ -2,7 +2,7 @@
 title: "K3s 备忘录"
 date: 2022-06-28T10:59:30+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "K3s搭建与配置备忘"
 tags: ["K3s"]
 ---

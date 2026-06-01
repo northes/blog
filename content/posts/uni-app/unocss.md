@@ -2,7 +2,7 @@
 title: "在 uni-app 中使用 unocss"
 date: 2025-02-10T12:16:11+08:00
 draft: false
-author: "northes"
+author: "ethan"
 description: "在 uni-app 中使用 unocss 与使用 unocss 支持的图标"
 tags: ["uni-app", "前端"]
 ---

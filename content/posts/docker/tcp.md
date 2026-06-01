@@ -2,7 +2,7 @@
 title: "Docker 开启 TCP 监听"
 date: 2023-03-08T02:26:53Z
 draft: false
-author : "Northes"
+author : "ethan"
 description: "开启 Docker 的 TCP 监听以支持远程调用"
 tags: ["学习笔记","Docker"]
 ---
@@ -38,4 +38,3 @@ docker -H tcp://192.168.31.26:2375 info
 ```bash
 export DOCKER_HOST="tcp://192.168.31.26:2375"
 ```
-

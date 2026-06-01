@@ -2,7 +2,7 @@
 title: "Minikube 备忘"
 date: 2022-02-20T21:45:33+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "minikube 踩坑备忘"
 tags: ["学习笔记","Kubernetes"]
 ---

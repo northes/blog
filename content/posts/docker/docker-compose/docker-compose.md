@@ -3,7 +3,7 @@ title: "Docker Compose 修炼手册"
 date: 2022-02-01T22:19:00+08:00
 lastmod: 1643899808024
 draft: false
-author : "Northes"
+author : "ethan"
 description: "docker compose 配置文件及常用命令"
 tags: ["学习笔记","Docker"]
 ---
@@ -37,7 +37,7 @@ services:
     volumes:
       - ./etc:/www/etc # 映射配置文件
 ```
-> 详情可看 https://github.com/northes/gin-layout
+> 详情可看 https://github.com/ethan/gin-layout
 
 ## 常用命令
 ```shell

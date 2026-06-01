@@ -2,7 +2,7 @@
 title: "滚动条的出现导致页面闪动"
 date: 2021-05-31T15:51:56+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "滚动条出现、消失导致页面跳动的解决办法"
 tags: ["CSS","学习笔记"]
 ---
@@ -72,4 +72,3 @@ body {
 本站已应用 [最终解决方案](#终极解决方案)
 
 可通过快速切换本博客的 Projects 页面与 About 页面感受
-

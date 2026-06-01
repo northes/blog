@@ -2,7 +2,7 @@
 title: "Go 内存模型"
 date: 2022-01-13T22:10:50+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "眼见不一定为实 - Go内存模型详解"
 tags: [翻译","Golang"]
 ---

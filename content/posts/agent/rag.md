@@ -2,7 +2,7 @@
 title: "RAG 的基本原理"
 date: 2026-03-04T10:10:15+08:00
 draft: false
-author: "northes"
+author: "ethan"
 description: "RAG（Retrieval-Augmented Generation，检索增强生成）的基本原理"
 tags: [ "学习笔记","LLM","Agent" ]
 ---

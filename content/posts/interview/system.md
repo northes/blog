@@ -2,7 +2,7 @@
 title: 操作系统八股文背诵版
 date: 2021-06-28T01:47:28+08:00
 draft: true
-author: Northes
+author: ethan
 description: 操作系统面试题
 tags:
   - Linux

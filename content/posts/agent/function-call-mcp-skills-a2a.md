@@ -1,8 +1,8 @@
 ---
 title: "从 Function Call 到 A2A：一文读懂 Agent 技术栈"
 date: 2026-05-28T16:21:48+08:00
-draft: true
-author: "northes"
+draft: false 
+author: "ethan"
 description: "用最通俗的方式，把 Function Call、MCP、Skills、A2A、ACP 这些 Agent 核心概念串成一条清晰的脉络"
 tags: ["学习笔记", "Agent", "AI"]
 ---

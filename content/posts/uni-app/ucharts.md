@@ -2,7 +2,7 @@
 title: "在 uni-app 中使用 u-charts"
 date: 2025-02-10T12:21:24+08:00
 draft: false
-author : "northes"
+author : "ethan"
 description: "在 uni-app 中使用 u-charts 绘制图表"
 tags: ["uni-app", "前端"]
 ---

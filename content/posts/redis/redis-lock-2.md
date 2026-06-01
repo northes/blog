@@ -2,7 +2,7 @@
 title: "Redis 实现分布式锁"
 date: 2024-06-20T21:23:28+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "使用Redis实现分布式锁的七种方案"
 tags: ["学习笔记","Redis"]
 ---

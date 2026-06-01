@@ -2,7 +2,7 @@
 title: "Go 配置私有化仓库"
 date: 2022-11-11T17:24:09+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "配置基于 GitLab 搭建的私有 module 仓库"
 tags: ["学习笔记","Golang"]
 ---

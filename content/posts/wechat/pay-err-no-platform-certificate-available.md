@@ -2,7 +2,7 @@
 title: "微信支付报错：无可用平台证书 解决方案"
 date: 2025-03-06T17:48:28+08:00
 draft: false
-author : "northes"
+author : "ethan"
 description: "最近在接微信支付的时候，遇到了一个 无可用平台证书 的报错，记录下解决过程"
 tags: ["微信支付","微信","支付"]
 ---

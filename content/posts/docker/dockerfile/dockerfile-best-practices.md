@@ -2,7 +2,7 @@
 title: "Dockerfile 最佳实践"
 date: 2022-02-16T13:56:00+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "使用过程中踩过的坑 总结的实践经历"
 tags: ["学习笔记","Docker"]
 ---

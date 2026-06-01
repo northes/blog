@@ -2,7 +2,7 @@
 title: "GitHub Action 入门 && 徽章"
 date: 2022-01-09T23:18:05+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "快速上手 GitHub Action, README 徽章是怎么来的"
 tags: ["学习笔记","CI/CD","GitHub"]
 ---
@@ -45,7 +45,7 @@ jobs: # 主体字段，表示执行的一项或多项任务
     steps: # 指定每个 job 的运行步骤，可以有一个或多个
       - name: print a greeting # 步骤名称
         env: # 当前步骤的环境变量
-          NAME: northes
+          NAME: ethan
         run: | # 运行命令
           echo Hello $NAME
   my_second_job:
@@ -92,24 +92,24 @@ jobs:
 
 ## 徽章
 ### CI徽章
-![Go](https://github.com/northes/action-test/actions/workflows/go.yml/badge.svg?branch=dev)
+![Go](https://github.com/ethan/action-test/actions/workflows/go.yml/badge.svg?branch=dev)
 
 - 用于展示CI状态。
 - 可在 `GitHub Actions` 某一 `Workflows` 的右手边点 `Create status badge` 生成
 
 ### Codecov徽章
-![codecov](https://codecov.io/gh/northes/action-test/branch/main/graph/badge.svg?token=TN33IN4UGZ)
+![codecov](https://codecov.io/gh/ethan/action-test/branch/main/graph/badge.svg?token=TN33IN4UGZ)
 
 - [https://codecov.io](https://codecov.io)
 - 用于展示测试覆盖率 。可在 `Codecov` 的 `Settings` 下的 `Badge` 选项处生成 
 
 ### Go代码质量徽章
-![Go Report Card](https://goreportcard.com/badge/github.com/northes/action-test)
+![Go Report Card](https://goreportcard.com/badge/github.com/ethan/action-test)
 - [https://goreportcard.com/](https://goreportcard.com/)
 - 前提是您的包的 `go.mod` 的 `module` 必须与您的仓库地址一致，否则会提示无法拉取包
 
 ### Go包文档徽章
-![Go Reference](https://pkg.go.dev/badge/github.com/northes/action-test.svg)
+![Go Reference](https://pkg.go.dev/badge/github.com/ethan/action-test.svg)
 - [https://pkg.go.dev/badge/](https://pkg.go.dev/badge/)
 - 包名要求与 `Go代码质量徽章` 的要求一样
 - 会直接跳转到 `pkg.go.dev` 的包文档，文档自动生成(需按照一定的规则，自行 Google )
@@ -124,4 +124,4 @@ jobs:
 - https://about.codecov.io/
 - https://about.codecov.io/blog/getting-started-with-code-coverage-for-golang/
 - https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html
-- https://github.com/northes/action-test
+- https://github.com/ethan/action-test

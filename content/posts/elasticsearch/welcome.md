@@ -2,7 +2,7 @@
 title: "Elasticsearch - 入门"
 date: 2021-12-22T23:21:09+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "Elasticsearch 安装,启动 Kibana,Cerebro等"
 tags: ["学习笔记","Elasticsearch"]
 ---

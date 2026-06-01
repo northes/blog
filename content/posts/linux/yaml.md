@@ -2,7 +2,7 @@
 title: "Yaml 实用技巧"
 date: 2022-06-30T15:11:48+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "Yaml 实用技巧备忘"
 tags: ["Yaml"]
 ---

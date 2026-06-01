@@ -2,7 +2,7 @@
 title: "Git 常用命令"
 date: 2021-08-23T20:15:24+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "Git常用命令"
 tags: ["学习笔记","Git"]
 ---

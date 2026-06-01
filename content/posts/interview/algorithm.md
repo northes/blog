@@ -2,7 +2,7 @@
 title: "算法面试八股文"
 date: 2024-06-21T11:05:14+08:00
 draft: true
-author : "northes"
+author : "ethan"
 description: "算法面试八股文"
 tags: ["算法","八股文","面试"]
 ---

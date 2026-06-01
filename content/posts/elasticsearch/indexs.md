@@ -2,7 +2,7 @@
 title: "Elasticsearch - 索引"
 date: 2021-12-29T16:08:28+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "简介简介"
 tags: ["学习笔记"]
 ---
@@ -18,4 +18,3 @@ tags: ["学习笔记"]
 `Shard` 分片。物理空间的概念，索引中的数据分散在 Shard 上
 
 `Setting` 定义不同的数据分布。多少个分片，数据如何分布等
-

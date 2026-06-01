@@ -2,7 +2,7 @@
 title: "Elasticsearch 笔记合集"
 date: 2022-01-11T09:23:49+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "简介简介"
 tags: ["学习笔记"]
 ---

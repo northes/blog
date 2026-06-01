@@ -2,7 +2,7 @@
 title: "MySQL 常用命令"
 date: 2021-06-27T21:55:00+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "MySQL的常用命令"
 tags: ["学习笔记","MySQL"]
 ---
@@ -162,5 +162,3 @@ UPDATE table_name SET field1=new_value1 WHERE id=1;
 ```mysql
 DELETE FROM table_name WHERE id<5;
 ```
-
-

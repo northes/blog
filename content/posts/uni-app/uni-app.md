@@ -2,7 +2,7 @@
 title: "uni-app 上手遇到的坑，我都踩了"
 date: 2025-02-10T11:42:19+08:00
 draft: false
-author: "northes"
+author: "ethan"
 description: "本文记录了在 uni-app 开发中遇到的问题，以及解决方案"
 tags: ["uni-app", "前端"]
 ---

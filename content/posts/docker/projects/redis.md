@@ -2,7 +2,7 @@
 title: "使用 Docker 部署 Redis"
 date: 2022-01-11T09:11:02+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "使用Docker运行Redis"
 tags: ["实践","学习笔记"]
 ---

@@ -2,7 +2,7 @@
 title: "Linux"
 date: 2021-12-14T22:15:51+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "简介简介"
 tags: ["学习笔记"]
 ---

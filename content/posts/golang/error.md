@@ -2,7 +2,7 @@
 title: "Go 错误处理实践"
 date: 2022-01-08T19:34:08+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "Go 错误处理的优雅姿势"
 tags: ["学习笔记","Golang"]
 ---
@@ -607,4 +607,3 @@ func (m *myError) Error() string {
 }
 
 ```
-

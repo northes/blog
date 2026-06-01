@@ -2,7 +2,7 @@
 title: "挂载 SMB 目录"
 date: 2023-02-27T15:27:26+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "使用 mount 命令挂载 SMB 目录的方法"
 tags: ["学习笔记"]
 ---

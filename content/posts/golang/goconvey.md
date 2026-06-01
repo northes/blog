@@ -2,7 +2,7 @@
 title: "Goconvey 测试框架"
 date: 2021-09-03T13:59:46+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "go测试框架，兼容go-test，带完整web页面"
 tags: ["学习笔记","Golang"]
 ---

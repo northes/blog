@@ -2,7 +2,7 @@
 title: "K8s 搭建 Mysql 主从实录"
 date: 2022-02-25T14:27:26+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "读写分离，法力无边"
 tags: ["Kubernetes","MySQL"]
 ---

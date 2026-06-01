@@ -2,7 +2,7 @@
 title: "滚动条美化"
 date: 2021-05-31T16:12:35+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "美化默认滚动条的样式"
 tags: ["CSS","学习笔记"]
 ---
@@ -58,4 +58,3 @@ tags: ["CSS","学习笔记"]
     background-color: #ced4da;
 }
 ```
-

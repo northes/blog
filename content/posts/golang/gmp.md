@@ -2,7 +2,7 @@
 title: "Go 的 GMP 模型"
 date: 2022-01-30T21:19:46+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "Go 中的GMP模型"
 tags: ["学习笔记","Golang"]
 ---

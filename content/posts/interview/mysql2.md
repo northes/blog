@@ -2,7 +2,7 @@
 title: "数据库八股文背诵版 - 2"
 date: 2022-01-24T14:59:32+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "简介简介"
 tags: ["MySQL","八股文","面试"]
 ---

@@ -2,7 +2,7 @@
 title: "Linux 常用命令"
 date: 2021-12-17T23:31:02+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "Linux 常用命令"
 tags: ["学习笔记"]
 ---

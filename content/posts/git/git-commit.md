@@ -2,7 +2,7 @@
 title: "Git Commit 规范指南"
 date: 2021-05-28T12:09:13+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 tags: ["Git","学习笔记"]
 description:  "Angular 规范是社区中应用最广的Commit message 规范。能够清楚地说明提交目的"
 ---

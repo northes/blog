@@ -2,7 +2,7 @@
 title: "使用 Docker 部署 Mysql"
 date: 2022-01-11T09:11:07+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "使用Docker运行MySQL"
 tags: ["实践","学习笔记"]
 ---
@@ -150,4 +150,3 @@ UPDATE table_name SET field1=new-value1, field2=new-value2
 ```mysql
 DELETE FROM table_name [WHERE Clause]
 ```
-

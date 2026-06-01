@@ -2,7 +2,7 @@
 title: "Cloudflare Tunnel 使用笔记"
 date: 2023-03-08T02:14:14Z
 draft: false
-author : "Northes"
+author : "ethan"
 description: "简单介绍如何使用Cloudflare Tunnel进行内网穿透，并使用自定义域名"
 tags: ["学习笔记"]
 ---

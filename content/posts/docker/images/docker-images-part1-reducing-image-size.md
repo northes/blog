@@ -2,7 +2,7 @@
 title: "Docker镜像：减少镜像体积"
 date: 2022-02-16T22:18:57+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "通过选择基础镜像、多阶构建的以减少镜像体积"
 tags: ["翻译","Docker"]
 ---
@@ -19,4 +19,3 @@ tags: ["翻译","Docker"]
 在第三部分，我们将介绍一些适用于大多数语言的通用的模式。例如使用基础镜像、剥离二进制文件和减少静态文件的大小。我们将使用一些更高级的方法，例如 Bazel、Distroless、DockerSlim 或 UPX。这在某些情况下是有效的，但也有可能适得其反。
 
 ## 万恶之源
-

@@ -2,7 +2,7 @@
 title: "Elasticsearch - 节点与集群"
 date: 2021-12-25T00:20:04+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "分片，节点，集群解释"
 tags: ["学习笔记","Elasticsearch"]
 ---

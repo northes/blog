@@ -2,7 +2,7 @@
 title: "LXC 直通核显"
 date: 2023-02-27T15:20:45+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "LXC 直通核显进行解码的方法"
 tags: ["学习笔记","PVE","Emby","Jellyfin"]
 ---

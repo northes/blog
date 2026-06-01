@@ -2,7 +2,7 @@
 title: "Docker镜像：进一步减少镜像大小"
 date: 2022-02-16T22:32:21+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "进一步压缩体积"
 tags: ["翻译","Docker"]
 ---

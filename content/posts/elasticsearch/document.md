@@ -2,7 +2,7 @@
 title: "Elasticsearch - 文档"
 date: 2021-12-25T00:05:43+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "索引、文档字段释义，与关系型数据库对比"
 tags: ["学习笔记","Elasticsearch"]
 ---

@@ -2,7 +2,7 @@
 title: "消息队列入门"
 date: 2022-01-26T20:57:26+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "消息队列入门"
 tags: ["学习笔记"]
 ---

@@ -2,7 +2,7 @@
 title: "K3S 开启 Traefik Dashboard"
 date: 2022-02-24T15:12:37+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "开启k3s自带的Ingress控制器的面板"
 tags: ["学习笔记","k3s"]
 ---

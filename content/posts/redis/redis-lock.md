@@ -2,7 +2,7 @@
 title: "Redis 分布式锁实现原理演进历程"
 date: 2021-12-31T23:36:46+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "Redis分布式锁原理与实战总结"
 tags: ["学习笔记"]
 ---
@@ -73,6 +73,3 @@ redis 官方推荐的一种分布式锁实现机制
 待定，改用 go 的包
 
 ## 看门狗实现原理
-
-
-

@@ -2,7 +2,7 @@
 title: "Golang 学习笔记"
 date: 2021-02-27T00:13:05+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "Golang 学习笔记"
 tags: ["学习笔记","Golang"]
 ---

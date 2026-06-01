@@ -2,7 +2,7 @@
 title: "Select 语句"
 date: 2021-09-14T14:56:19+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "Go 中的select语句"
 tags: ["学习笔记","Golang"]
 ---

@@ -2,7 +2,7 @@
 title: "Kubernetes - 安装、集群创建"
 date: 2021-12-18T14:39:22+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "k8s单机、集群创建"
 tags: ["学习笔记","Kubernetes"]
 ---

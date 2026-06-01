@@ -2,7 +2,7 @@
 title: "Linux 搭建 NFS"
 date: 2022-06-21T10:58:35+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "在 CentOS 8 下搭建 NFS(Network File System) 分布式文件系统"
 tags: ["学习笔记","Linux","NFS"]
 ---

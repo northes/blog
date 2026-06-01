@@ -2,7 +2,7 @@
 title: "Harbor 搭建镜像代理"
 date: 2022-06-21T11:17:34+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "使用 Harbor 代理 k8s.gcr.io,gcr.io,ghcr.io,quay.io 等墙外镜像"
 tags: ["学习笔记","Docker","Harbor"]
 ---

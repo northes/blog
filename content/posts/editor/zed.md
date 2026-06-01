@@ -2,7 +2,7 @@
 title: "Zed 折腾指北"
 date: 2025-02-12T10:56:13+08:00
 draft: false
-author: "northes"
+author: "ethan"
 description: "快速上手高性能编辑器 Zed 的配置与使用指南，示例配置，推荐安装的插件"
 tags: ["编辑器", "Zed"]
 ---

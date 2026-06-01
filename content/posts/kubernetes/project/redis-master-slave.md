@@ -2,7 +2,7 @@
 title: "K8s 搭建 Redis 主从实录"
 date: 2022-02-27T21:10:32+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "一主一从，读写分离"
 tags: ["Kubernetes","Redis"]
 ---

@@ -2,7 +2,7 @@
 title: "使用 Dockerfile 构建镜像"
 date: 2022-01-11T09:10:16+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "简介简介"
 tags: ["学习笔记","Docker"]
 ---

@@ -2,7 +2,7 @@
 title: "Statefulset"
 date: 2022-02-27T20:25:05+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "简介简介"
 tags: ["学习笔记"]
 ---

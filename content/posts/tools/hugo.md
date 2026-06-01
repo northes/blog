@@ -2,7 +2,7 @@
 title: "Hugo 学习笔记"
 date: 2021-05-28T00:11:38+08:00
 draft: false
-author: "Northes"
+author: "ethan"
 description: "Hugo 的常用配置，命令等。以及部署过程中踩过的坑"
 tags: ["Hugo","学习笔记"]
 ---
@@ -24,9 +24,9 @@ https://github.com/gohugoio/hugo
 ### TOML 格式
 
 ```toml
-baseURL = "https://northes.io/"
+baseURL = "https://ethan.io/"
 languageCode = "zh-cn"
-title = "Northes"
+title = "ethan"
 theme = "hugo-tania"
 
 [params]
@@ -101,7 +101,7 @@ markup:
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true
-author : "Northes"
+author : "ethan"
 ---
 ```
 
@@ -124,7 +124,7 @@ date: 2021-05-28T12:09:13+08:00
 # 是否为草稿状态，为草稿状态时不加 -D 运行参数文章不可见
 draft: true
 # 作者
-author: "Northes"
+author: "ethan"
 # 简介
 description: "这是一篇文章"
 # 上次修改时间
@@ -205,4 +205,3 @@ Error: Error building site: failed to render pages: render of "page" failed: "/v
 $ hugo version
 hugo v0.83.1-5AFE0A57 windows/amd64 BuildDate=2021-05-02T14:38:05Z VendorInfo=gohugoio
 ```
-

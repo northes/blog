@@ -2,7 +2,7 @@
 title: "Elasticsearch - 游标"
 date: 2021-12-29T14:36:31+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "游标查询，解决深度分页带来的性能问题"
 tags: ["学习笔记","Elasticsearch"]
 ---

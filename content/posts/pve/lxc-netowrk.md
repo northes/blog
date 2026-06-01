@@ -2,7 +2,7 @@
 title: "LXC 下无法启动 Tailscale"
 date: 2023-02-27T15:06:15+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "LCX 使用 OpenVPN，Tailscale 等工具时无法启动的解决方法"
 tags: ["学习笔记"]
 ---

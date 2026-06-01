@@ -2,7 +2,7 @@
 title: "Elasticsearch - 映射"
 date: 2021-12-29T15:50:52+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "简介简介"
 tags: ["学习笔记","Elasticsearch"]
 ---

@@ -2,7 +2,7 @@
 title: "Harness Engineering：给大模型套上缰绳"
 date: 2026-05-28T13:50:54+08:00
 draft: false
-author: "northes"
+author: "ethan"
 description: "从 Prompt 到 Context 再到 Harness，AI 工程的重心已经换了三次"
 tags: ["学习笔记", "Agent", "AI Engineering"]
 ---

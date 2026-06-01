@@ -2,7 +2,7 @@
 title: "Ent 学习笔记"
 date: 2021-09-16T09:40:03+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "Ent 是一个简单而又功能强大的Go语言实体框架，ent易于构建和维护应用程序与大数据模型。"
 tags: ["学习笔记","数据库"]
 ---

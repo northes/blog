@@ -2,7 +2,7 @@
 title: "Elasticsearch - 文档 CRUD"
 date: 2021-12-25T01:16:55+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "文档的增删改查，批量操作"
 tags: ["学习笔记","Elasticsearch"]
 ---
@@ -586,4 +586,3 @@ index 和 create 不一样的地方：
 429 集群过于繁忙 （重试请求或增加集群节点）
 
 500 集群内部错误
-

@@ -2,7 +2,7 @@
 title: "go-micro 学习笔记"
 date: 2021-07-27T21:39:28+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "go-micro 是一个应用广泛的微服务框架。学习及踩坑记录"
 tags: ["学习笔记","Golang","微服务"]
 ---
@@ -95,4 +95,3 @@ Please specify either:
 ```shell
 option go_package = "./proto;user";
 ```
-

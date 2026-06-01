@@ -2,7 +2,7 @@
 title: "关于 Appsmith 的不吐不快"
 date: 2025-03-06T17:22:13+08:00
 draft: false
-author : "northes"
+author : "ethan"
 description: "关于 Appsmith 的吐槽"
 tags: ["吐槽","Appsmith"]
 ---

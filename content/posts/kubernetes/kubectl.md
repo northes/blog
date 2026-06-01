@@ -2,7 +2,7 @@
 title: "Kubernetes - Kubectl高效使用"
 date: 2021-12-18T14:46:34+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "K8s学习笔记"
 tags: ["学习笔记","Kubernetes"]
 ---

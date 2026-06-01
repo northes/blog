@@ -2,7 +2,7 @@
 title: "Docker镜像：特定语言的进一步处理"
 date: 2022-02-16T22:32:04+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "Go、Java、Python等"
 tags: ["翻译","Docker"]
 ---

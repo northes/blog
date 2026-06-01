@@ -2,7 +2,7 @@
 title: "UPX 学习笔记"
 date: 2021-06-02T09:45:36+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "UPX的使用方法，压缩二进制文件的体积"
 tags: ["UPX","学习笔记"]
 ---

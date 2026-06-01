@@ -2,7 +2,7 @@
 title: "Kubernetes - Deployment"
 date: 2022-01-14T16:20:06+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "简介简介"
 tags: ["学习笔记"]
 ---

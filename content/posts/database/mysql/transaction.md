@@ -2,7 +2,7 @@
 title: "MySQL 事务"
 date: 2022-01-29T20:59:31+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "事务的隔离级别"
 tags: ["学习笔记"]
 ---

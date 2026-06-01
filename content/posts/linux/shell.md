@@ -2,7 +2,7 @@
 title: "Shell 实用技巧"
 date: 2022-06-30T15:11:51+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "Shell 实用技巧备忘"
 tags: ["Shell","Linux"]
 ---

@@ -2,7 +2,7 @@
 title: "Vim 基础入门"
 date: 2022-01-26T09:53:15+08:00
 draft: true
-author : "Northes"
+author : "ethan"
 description: "简介简介"
 tags: ["学习笔记","Vim"]
 ---

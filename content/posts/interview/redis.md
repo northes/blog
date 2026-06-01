@@ -2,7 +2,7 @@
 title: Redis八股文背诵版
 date: 2021-06-28T01:58:13+08:00
 draft: true
-author: Northes
+author: ethan
 description: Redis面试题
 tags:
   - Redis

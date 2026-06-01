@@ -2,7 +2,7 @@
 title: "Elasticsearch - 分词"
 date: 2021-12-25T17:40:59+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "使用分词器进行倒排索引词典的创建"
 tags: ["学习笔记","Elasticsearch"]
 ---
@@ -381,4 +381,3 @@ tags: ["学习笔记","Elasticsearch"]
 	]
 }
 ```
-

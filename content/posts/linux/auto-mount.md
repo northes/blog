@@ -2,7 +2,7 @@
 title: "开机自动挂载"
 date: 2023-02-27T15:25:39+08:00
 draft: false
-author : "Northes"
+author : "ethan"
 description: "mount 命令在重启后会失效，想要开机自动挂载需要进行额外设置"
 tags: ["学习笔记"]
 ---
