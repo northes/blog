@@ -460,6 +460,70 @@ video {
   margin: 0 0 1rem;
 }
 
+.article-content table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 1.5rem;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.article-content table thead,
+.article-content table tbody,
+.article-content table tr {
+  width: max-content;
+  min-width: 100%;
+}
+
+.article-content table th,
+.article-content table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.article-content table th {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--foreground);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.article-content table td {
+  color: var(--foreground-soft);
+}
+
+.article-content table tr:last-child td {
+  border-bottom: 0;
+}
+
+.article-content table::-webkit-scrollbar {
+  height: 10px;
+}
+
+.article-content table::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 999px;
+}
+
+.article-content table::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
+
+.article-content table::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.32);
+}
+
 .article-content pre {
   overflow-x: auto;
   border-radius: 0.5rem;
@@ -630,9 +694,111 @@ video {
   margin: 0 0 1.5rem;
   border-radius: 0.5rem;
   overflow-x: auto;
-  background: #282c34;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .highlight .chroma code {
-  color: #abb2bf;
+  color: var(--foreground-soft);
+}
+
+/* Chroma token colors tuned for twilson dark theme */
+.highlight .chroma .k,
+.highlight .chroma .kd,
+.highlight .chroma .kn,
+.highlight .chroma .kr,
+.highlight .chroma .kt {
+  color: #ff8f73;
+}
+
+.highlight .chroma .nf,
+.highlight .chroma .fm,
+.highlight .chroma .nc {
+  color: #ffb097;
+}
+
+.highlight .chroma .nb,
+.highlight .chroma .bp {
+  color: #f9d27d;
+}
+
+.highlight .chroma .s,
+.highlight .chroma .sa,
+.highlight .chroma .sb,
+.highlight .chroma .sc,
+.highlight .chroma .s1,
+.highlight .chroma .s2,
+.highlight .chroma .sd,
+.highlight .chroma .se,
+.highlight .chroma .sh,
+.highlight .chroma .si,
+.highlight .chroma .sr,
+.highlight .chroma .ss,
+.highlight .chroma .sx,
+.highlight .chroma .dl {
+  color: #9fd3b0;
+}
+
+.highlight .chroma .mi,
+.highlight .chroma .mf,
+.highlight .chroma .mh,
+.highlight .chroma .il,
+.highlight .chroma .mo {
+  color: #79c7ff;
+}
+
+.highlight .chroma .c,
+.highlight .chroma .ch,
+.highlight .chroma .cm,
+.highlight .chroma .c1,
+.highlight .chroma .cs,
+.highlight .chroma .cp,
+.highlight .chroma .cpf {
+  color: var(--foreground-muted);
+  font-style: italic;
+}
+
+.highlight .chroma .o,
+.highlight .chroma .ow {
+  color: #ffcf8f;
+}
+
+.highlight .chroma .p {
+  color: rgba(250, 250, 250, 0.72);
+
+}
+
+.highlight .chroma .lnt,
+.highlight .chroma .ln {
+  color: rgba(250, 250, 250, 0.35);
+}
+
+.highlight .chroma .hl {
+  background: rgba(245, 48, 3, 0.14);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.32);
 }
