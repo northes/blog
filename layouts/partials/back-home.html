@@ -1,0 +1,12 @@
+{{ $backUrl := "/" | relLangURL }}
+{{ $backLabel := "← 返回首页" }}
+{{ if eq .Data.Singular "tag" }}
+{{ $backUrl = "/articles/" | relLangURL }}
+{{ $backLabel = "← 返回文章列表" }}
+{{ else if and (eq .Section "projects") (not .IsSection) }}
+{{ $backUrl = "/projects/" | relLangURL }}
+{{ $backLabel = "← 返回项目列表" }}
+{{ end }}
+<nav class="back-home" aria-label="返回导航">
+    <a href="{{ $backUrl }}">{{ $backLabel }}</a>
+</nav>

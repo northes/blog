@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $tw := .Site.Params.twilson | default dict }}
 {{ $allProjects := where .Site.RegularPages "Section" "projects" }}
-{{ $homeProjects := sort (where $allProjects "Params.highlight" "ge" 0) "Params.highlight" }}
+{{ $homeProjects := sort (where $allProjects "Params.show_in_home" true) "Params.home_index" }}
 <div class="page-shell home">
     <section class="home-hero animate-blur-in" style="animation-delay: 0s">
         <h1 class="home-hero__title">

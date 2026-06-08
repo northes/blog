@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $projects := sort (where .Site.RegularPages "Section" "projects") "Weight" }}
+{{ $projects := sort (where .Site.RegularPages "Section" "projects") "Params.index" }}
 
 <div class="page-shell">
     {{ partial "back-home.html" . }}

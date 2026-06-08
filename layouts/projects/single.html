@@ -1,0 +1,86 @@
+{{ define "main" }}
+{{ $page := . }}
+{{ $imgParam := $page.Params.image | default $page.Params.media }}
+{{ $imgSrc := "" }}
+{{ if $imgParam }}
+  {{ if or (strings.HasPrefix $imgParam "http://") (strings.HasPrefix $imgParam "https://") (strings.HasPrefix $imgParam "/") }}
+    {{ $imgSrc = $imgParam }}
+  {{ else }}
+    {{ with $page.Resources.GetMatch $imgParam }}
+      {{ $imgSrc = (.Fill "1200x675").RelPermalink }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $metaParts := slice }}
+{{ with .Params.role }}{{ $metaParts = $metaParts | append . }}{{ end }}
+{{ $dateStart := .Params.dateStart }}
+{{ $dateEnd := .Params.dateEnd }}
+{{ if or $dateStart $dateEnd }}
+  {{ $dateRange := "" }}
+  {{ if and $dateStart $dateEnd }}
+    {{ $dateRange = printf "%s — %s" $dateStart $dateEnd }}
+  {{ else if $dateStart }}
+    {{ $dateRange = printf "%s —" $dateStart }}
+  {{ else }}
+    {{ $dateRange = printf "— %s" $dateEnd }}
+  {{ end }}
+  {{ $metaParts = $metaParts | append $dateRange }}
+{{ end }}
+
+<article class="page-shell project-detail">
+    {{ partial "back-home.html" . }}
+
+    {{ with $imgSrc }}
+    <div class="project-detail__hero">
+        <img src="{{ . | safeURL }}" alt="{{ $page.Title }}" width="1200" height="675" loading="eager">
+    </div>
+    {{ end }}
+
+    <header class="project-detail__header">
+        <h1>{{ .Title }}</h1>
+        {{ if $metaParts }}
+        <p class="project-detail__meta">{{ delimit $metaParts " · " }}</p>
+        {{ end }}
+        {{ if .Draft }}
+        <p class="project-detail__draft">Draft — 仅本地预览可见</p>
+        {{ end }}
+    </header>
+
+    {{ with .Params.lead }}
+    <p class="project-detail__lead">{{ . }}</p>
+    {{ end }}
+
+    {{ if .Content }}
+    <div class="article-content project-detail__content">
+        {{ .Content }}
+    </div>
+    {{ end }}
+
+    {{ with .Params.highlights }}
+    <section class="project-detail__highlights">
+        <h2 class="project-detail__section-label">Highlights</h2>
+        <ul>
+            {{ range . }}
+            <li>{{ . }}</li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
+
+    {{ with .Params.links }}
+    <section class="project-detail__links">
+        <h2 class="project-detail__section-label">Links</h2>
+        <ul>
+            {{ range . }}
+            <li>
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+                    {{ .text }}<span class="project-detail__external" aria-hidden="true">↗</span>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
+</article>
+{{ end }}
